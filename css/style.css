@@ -68,9 +68,11 @@ header .gnav_list li a {
   font-size: 22px;
   text-align: center;
   line-height: 80px;
+  margin: 0 auto 70px;
   background-color: #C53B70;
   color: #fff;
   z-index: 1;
+  transform: translateY(-40px);
 }
 .wrapper section h1::after {
   position: absolute;
@@ -85,8 +87,9 @@ header .gnav_list li a {
 }
 .wrapper section .news {
   width: 1400;
-  height: 650px;
+  height: 520px;
   background-color: #fff;
+  border: #1C96D4 3px solid;
 }
 .wrapper section .news h1 {
   background-color: #1C96D4;
@@ -94,8 +97,19 @@ header .gnav_list li a {
 .wrapper section .news h1::after {
   background-image: url(../img/heading_back_b.webp);
 }
-.wrapper section .news dl {
+.wrapper section .news__area {
+  width: 900px;
+  margin: 0 auto 64px;
+  border-top: #000 1px solid;
+}
+.wrapper section .news__area dl {
   display: flex;
+  padding: 30px 0;
+  border-bottom: #000 1px solid;
+}
+.wrapper section .contest {
+  background-color: #fff;
+  border: #FAC000 3px solid;
 }
 .wrapper section .contest h1 {
   background-color: #FAC000;
@@ -126,8 +140,20 @@ header .gnav_list li a {
   background-image: url(../img/heading_back_g.webp);
 }
 
+.sponsor {
+  width: 1400px;
+  height: 950px;
+  margin-bottom: 200px;
+  background-color: #fff;
+  border: #C53B70 3px solid;
+}
 .sponsor div {
+  padding: 0 120px;
   display: flex;
+}
+.sponsor img {
+  max-height: 280px;
+  padding: 0 3px;
 }
 
 footer {

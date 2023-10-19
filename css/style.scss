@@ -85,9 +85,12 @@ header {
             font-size: 22px;
             text-align: center;
             line-height: 80px;
+            margin: 0 auto 70px;
             background-color: #C53B70;
             color: #fff;
             z-index: 1;
+            transform: translateY(-40px);
+
 
             &::after {
                 position: absolute;
@@ -104,25 +107,36 @@ header {
 
         .news {
             width: 1400;
-            height: 650px;
+            height: 520px;
             background-color: #fff;
+            border: #1C96D4 3px solid;
+            // box-shadow: 2px 5px 15px #1C96D4;
+
 
             h1 {
                 background-color: #1C96D4;
+                // transform: translateY(-40px);
 
                 &::after {
                     background-image: url(../img/heading_back_b.webp);
                 }
             }
-
-            dl {
-                display: flex;
+            &__area{
+                width: 900px;
+                margin: 0 auto 64px;
+                border-top: #000 1px solid;
+                dl {
+                    display: flex;
+                    padding: 30px 0;
+                    border-bottom: #000 1px solid;
+                }
             }
         }
 
         .contest {
-            // background-color: #707070;
-
+            background-color: #fff;
+            border: #FAC000 3px solid;
+            // box-shadow: 2px 5px 15px #FAC000;
             h1 {
                 background-color: #FAC000;
 
@@ -166,8 +180,18 @@ header {
 }
 
 .sponsor {
+    width: 1400px;
+    height: 950px;
+    margin-bottom: 200px;
+    background-color: #fff;
+    border: #C53B70 3px solid;
     div {
+        padding: 0 120px;
         display: flex;
+    }
+    img {
+        max-height: 280px;
+        padding: 0 3px;
     }
 }
 
