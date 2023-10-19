@@ -22,11 +22,12 @@
         </nav>
     </header>
 
-    <main class="access">
+    <main class="access">            
+        <div class="h-menu">
+            <div class="h-menu-btn"></div>
+        </div>
+        <img class="frame-top" src="img/frame_top_y.webp" alt="">
         <div class="container">
-            <div class="h-menu">
-                <div class="h-menu-btn"></div>
-            </div>
             <h1>ACCESS</h1>
             <div class="wrapper">
                 <div class="wrapper-left">
@@ -41,12 +42,18 @@
                 <img class="map" src="img/map.png" alt="地図">
             </div>
         </div>
-        
-
     </main>
 
     <footer>
         <p><small>©2022 TOKYO ELECTRONICS COLLEGE<br>制作・運営 学園祭実行委員会/ウェブ・メディア科</small></p>
     </footer>
-¥</body>
+    <script>
+        "use strict";
+        const hMenu = document.querySelector('.h-menu');
+        const header = document.querySelector('header');
+        hMenu.addEventListener('mousedown', () => {
+            header.classList.toggle('up');
+        });
+    </script>
+</body>
 </html>
