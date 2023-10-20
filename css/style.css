@@ -233,7 +233,7 @@ footer p {
 
 @keyframes fadeInAnime {
   0%{
-    transform: translateY(-80px);
+    transform: translateY(-100px);
     }
   
   100%{
@@ -247,6 +247,6 @@ footer p {
       }
     
     100%{
-      transform: translateY(-80px);
+      transform: translateY(-100px);
       }
     }
