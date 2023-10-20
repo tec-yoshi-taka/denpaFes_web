@@ -3,7 +3,6 @@
 const header = document.querySelector('header');
 let judge = false;
 window.addEventListener('scroll', () => {
-    console.log(window.pageYOffset)
     if(window.pageYOffset < 150){
         header.classList.remove("menuAnime");
         if(judge == true){
