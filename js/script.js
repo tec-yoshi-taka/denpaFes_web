@@ -1,18 +1,18 @@
 "use strict"
 
 const header = document.querySelector('header');
-
+let judge = false;
 window.addEventListener('scroll', () => {
     console.log(window.pageYOffset)
     if(window.pageYOffset < 150){
         header.classList.remove("menuAnime");
+        if(judge == true){
+            header.classList.add("menuBackAnime");
+        }
     }else{
         header.classList.add("menuAnime");
-    }
-    if(window.pageYOffset < 145){
-        header.classList.add("menuBackAnime");
-    }else{
         header.classList.remove("menuBackAnime");
+        judge = true;
     }
 })
 
