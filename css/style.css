@@ -18,7 +18,7 @@ header {
   top: -100px;
   width: 100%;
   height: 85px;
-  background-color: rgba(200, 200, 200, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   position: fixed;
   z-index: 999;
 }
@@ -37,25 +37,56 @@ header .gnav_list li {
   align-items: center;
   font-family: "sans-serif";
 }
-header .gnav_list li::after {
+header .gnav_list li:nth-of-type(1) a {
+  font-family: "Noto Sans", sans-serif;
+  display: block;
+  padding: 0 30px 0 30px;
+  width: 100%;
+  height: 100%;
+}
+header .gnav_list li:nth-of-type(1) a::after {
   content: "";
   display: block;
   width: calc(100% + 60px);
   height: 10px;
-  border-radius: 6px;
+  border-radius: 5px;
   margin-top: 15px;
+  transform: translateX(-30px);
+  background-color: #D31176;
 }
-header .gnav_list li:nth-of-type(1)::after {
-  background-color: #C53B70;
+header .gnav_list li:nth-of-type(2) a {
+  font-family: "Noto Sans", sans-serif;
+  display: block;
+  padding: 0 30px 0 30px;
+  width: 100%;
+  height: 100%;
 }
-header .gnav_list li:nth-of-type(2)::after {
+header .gnav_list li:nth-of-type(2) a::after {
+  content: "";
+  display: block;
+  width: calc(100% + 60px);
+  height: 10px;
+  border-radius: 5px;
+  margin-top: 12px;
+  transform: translateX(-30px);
   background-color: #348439;
 }
-header .gnav_list li:nth-of-type(3)::after {
-  background-color: #FAC000;
-}
-header .gnav_list li a {
+header .gnav_list li:nth-of-type(3) a {
   font-family: "Noto Sans", sans-serif;
+  display: block;
+  padding: 0 30px 0 30px;
+  width: 100%;
+  height: 100%;
+}
+header .gnav_list li:nth-of-type(3) a::after {
+  content: "";
+  display: block;
+  width: calc(100% + 60px);
+  height: 10px;
+  border-radius: 5px;
+  margin-top: 12px;
+  transform: translateX(-30px);
+  background-color: #E6B425;
 }
 
 .wrapper {
