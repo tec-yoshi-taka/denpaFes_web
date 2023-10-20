@@ -151,6 +151,18 @@ footer p {
   width: 100%;
   margin: 0 100px 0 auto;
 }
+.access .container .wrapper-left .tec-container {
+  display: flex;
+}
+.access .container .wrapper-left .tec-container img {
+  width: 150px;
+}
+.access .container .wrapper-left .tec-container span {
+  font-size: 36px;
+}
+.access .container .wrapper-left .tec-container .tec-name-ruby {
+  font-size: 16px;
+}
 .access .container .wrapper-left img {
   display: block;
 }
