@@ -105,7 +105,7 @@ header {
     }
 }
 
-
+/*------------------------------------MAIN------------------------------------*/
 .wrapper {
     width: 100%;
     margin: 0 auto;
@@ -293,25 +293,6 @@ footer {
     }
 }
 
-/*------------------------------------FOOTER------------------------------------*/
-footer {
-    width: 100%;
-    height: 112px;
-    margin-top: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #525252;
-}
-
-footer p {
-    text-align: center;
-    font-size: 13px;
-    color: #fff;
-    line-height: 24px;
-    font-family: "Noto Sans", sans-serif;
-    font-family: "Noto Sans JP", sans-serif;
-}
 
 /*---------------------------------MENU ANIMETION---------------------------------*/
 .menuAnime {
