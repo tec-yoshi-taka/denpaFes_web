@@ -263,4 +263,38 @@ footer p {
     transform: translateY(0px);
   }
 }
+/*---------------BACKGROUND OPACITY-------------------*/
+.bgLight {
+  animation-name: bgAnime;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.bgOrigin {
+  animation-name: bgAnimeReverse;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bgAnime {
+  0% {
+    background-color: rgba(255, 255, 255, 0);
+    background-blend-mode: normal;
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.7);
+    background-blend-mode: lighten;
+  }
+}
+@keyframes bgAnimeReverse {
+  0% {
+    background-color: rgba(255, 255, 255, 0.7);
+    background-blend-mode: lighten;
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+    background-blend-mode: normal;
+  }
+}
 /*# sourceMappingURL=style.css.map */
