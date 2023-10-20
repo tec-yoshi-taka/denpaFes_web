@@ -157,23 +157,23 @@ header .gnav_list li a {
   height: 710px;
   box-shadow: 5px 5px 15px #FAC000;
 }
-.wrapper section .map {
+.wrapper section .schedule {
   width: 90%;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.5);
   border: #348439 3px solid;
   padding-bottom: 120px;
 }
-.wrapper section .map h1 {
+.wrapper section .schedule h1 {
   background-color: #348439;
 }
-.wrapper section .map h1::after {
+.wrapper section .schedule h1::after {
   background-image: url(../img/heading_back_g.webp);
 }
-.wrapper section .map .time {
+.wrapper section .schedule .time {
   text-align: center;
 }
-.wrapper section .map .time img {
+.wrapper section .schedule .time img {
   width: 800px;
 }
 
