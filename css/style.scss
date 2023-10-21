@@ -3,12 +3,27 @@ $blue:#1C96D4;
 $yellow:#FAC000;
 $green:#348439;
 
+$pc:1450;
+$sp:768;
+@mixin mq($bp){
+    @media screen and (max-width: #{$bp}px){
+        @content;
+    }
+}
+
+/*------------------------------------BODY------------------------------------*/
 body {
     background-image: url(../img/bg_pc.webp);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
-    background-size: 100%;
     font-family: 'Noto Sans', sans-serif;
     font-family: 'Noto Sans JP', sans-serif;
+    @include mq($sp) {
+        background-position: center -80px;
+    }
 }
 
 .main-visual {
@@ -16,6 +31,10 @@ body {
         width: 600px;
         height: auto;
         margin: 150px auto;
+        @include mq($sp) {
+            width: 75%;
+            
+        }    
     }
 }
 
@@ -107,11 +126,18 @@ header {
 
 /*------------------------------------MAIN------------------------------------*/
 .wrapper {
-    width: 100%;
+    width: 1400px;
     margin: 0 auto;
+    @include mq($pc){
+            width: 100%;
+            margin: 0 auto;    
+    }
 
     section {
         margin-top: 250px;
+        @include mq($sp) {
+            margin-top: 200px;
+        }
 
         h1 {
             position: relative;
@@ -125,6 +151,12 @@ header {
             color: #fff;
             z-index: 1;
             transform: translateY(-40px);
+            @include mq($sp) {
+                width: 180px;
+                height: 60px;
+                line-height: 60px;
+                margin: 0 auto 50px;
+            }
 
             &::after {
                 position: absolute;
@@ -135,7 +167,14 @@ header {
                 width: 100%;
                 height: 100%;
                 background-image: url(../img/heading_back_p.webp);
+                background-size: 10%;
                 z-index: -1;
+                @include mq($sp) {
+                    bottom: -30px;
+                    right: -25px;
+                    width: 95%;
+                    height: 70%;
+                }
             }
         }
 
@@ -150,26 +189,45 @@ header {
                 width: 90%;
                 margin: 0 auto;
                 display: flex;
+                padding-bottom: 120px;
+                @include mq($sp) {
+                    display: block;
+                    padding-bottom: 80px;
+                }
+                .cap {
+                    width: 35%;
+                    font-size: 18px;
+                    display: flex;
+                    align-items: center;
+                    @include mq($sp) {
+                        width: 90%;
+                        margin: 0 auto;
+                        margin-bottom: 100px;
+                    }
+                }    
                 .greet{
+                    overflow: auto;
                     width: 50%;
                     margin-left: 15%;
+                    height: 350px;
+                    @include mq($sp) {
+                        width: 90%;
+                        margin: 0 auto;
+                    }
                     h2{
                         font-size: 21px;
                         font-weight: bold;
+                        margin-bottom: 20px;
+                        @include mq($sp) {
+                            text-align: center;
+                        }
                     }
                     p {
-                        width: 80%;
-                        margin: 0 auto;
-                        margin-bottom: 80px;
+                        width: 100%;
+                        margin: 0 auto 50px;
                         font-size: 18px;
                     }
                 }
-            }
-            .cap {
-                width: 30%;
-                margin: 150px auto 0;
-                margin-bottom: 120px;
-                font-size: 18px;
             }
         }
         
@@ -180,6 +238,9 @@ header {
             padding-bottom: 120px;
             background-color: rgb(255, 255, 255, 0.5);
             border: #1C96D4 3px solid;
+            @include mq($sp) {
+                padding-bottom: 80px;
+            }
             // box-shadow: 2px 5px 15px #1C96D4;
 
 
@@ -193,7 +254,7 @@ header {
             }
 
             &__area {
-                width: 900px;
+                width: 70%;
                 margin: 0 auto;
                 border-top: #000 1px solid;
 
@@ -212,6 +273,9 @@ header {
             background-color: rgb(255, 255, 255, 0.5);
             border: $yellow 3px solid;
             padding-bottom: 120px;
+            @include mq($sp) {
+                padding-bottom: 80px;
+            }
 
             h1 {
                 background-color: $yellow;
@@ -226,13 +290,22 @@ header {
                 margin: 0 auto;
                 display: flex;
                 justify-content: space-around;
+                @include mq($sp) {
+                    display: block;
+                }
 
                 article {
                     position: relative;
                     background-color: #fff;
-                    width: 375px;
+                    width: 31%;
                     height: 700px;
                     box-shadow: 5px 5px 15px $yellow;
+                    @include mq($sp) {
+                        width: 95%;
+                        height: auto;
+                        padding-bottom: 10px;
+                        margin: 50px auto 0;
+                    }    
                 }
 
                 h2 {
@@ -243,17 +316,25 @@ header {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    // &:nth-of-type(2) {
-                    //     padding: 40px 0;
-                    // }
+                    @include mq($sp) {
+                        height: 100px;
+                    }
                 }
                 p {
                     display: block;
                     width: 95%;
                     margin: 0 auto;
+                    &:nth-of-type(1) {
+                        @include mq($sp) {
+                            text-align: center;
+                        }
+                    }
                     &:nth-of-type(2) {
                         margin-top: 20px;
                         font-size: 14px;
+                        @include mq($sp) {
+                            width: 90%;
+                        }
                     }
                     &:nth-of-type(3) {
                         color: #fff;
@@ -262,20 +343,27 @@ header {
                         bottom: 70px;
                         font-size: 18px;
                         transform: translateX(10px);
+                        @include mq($sp) {
+                            position: static;
+                            margin: 50px auto;
+                            transform: translateX(0);
+                        }
                         a {
                             display: block;
                             background-color: $yellow;
-                            width: 200px;
+                            width: 55%;
                             height: 50px;
                             margin: 0 auto;
                             display: flex;
                             justify-content: center;
                             align-items: center;
                             border-radius: 30px;
+                            @include mq($sp) {
+                                width: 200px;
+                            }
                         }
                     }
                 }
-
             }
         }
 
@@ -286,20 +374,20 @@ header {
             background-color: rgb(255, 255, 255, 0.5);
             border: $green 3px solid;
             padding-bottom: 120px;
-
+            @include mq($sp) {
+                padding-bottom: 80px;
+            }
             h1 {
                 background-color: #348439;
-
                 &::after {
                     background-image: url(../img/heading_back_g.webp);
                 }
             }
-
             .time {
                 text-align: center;
-
                 img {
                     width: 800px;
+                    transform: translateX(10px);
                 }
             }
             .map__link{
@@ -309,6 +397,10 @@ header {
                 bottom: 70px;
                 font-size: 18px;
                 transform: translateX(10px);
+                @include mq($sp) {
+                    transform: translateX(0);
+                    margin-top: 60px;
+                }
                 a {
                     background-color: $green;
                     width: 200px;
@@ -331,9 +423,14 @@ header {
     background-color: rgb(255, 255, 255, 0.5);
     border: $red 3px solid;
     padding-bottom: 120px;
+    @include mq($sp) {
+        padding-bottom: 80px;
+    }
+
 
     div {
-        padding: 0 120px;
+        width: 90%;
+        margin: 0 auto;
         display: flex;
     }
 
@@ -369,12 +466,18 @@ footer {
     animation-name: fadeInAnime;
     animation-duration: 0.8s;
     animation-fill-mode: forwards;
+    @include mq($sp) {
+        display: none;
+    }
 }
 
 .menuBackAnime {
     animation-name: fadeOutAnime;
     animation-duration: 0.8s;
     animation-fill-mode: forwards;
+    @include mq($sp) {
+        display: none;
+    }
 }
 
 @keyframes fadeInAnime {
@@ -433,7 +536,5 @@ footer {
         background-blend-mode: normal;
     }
 }
-
-
 
 /*# sourceMappingURL=style.css.map */
