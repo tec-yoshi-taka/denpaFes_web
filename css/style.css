@@ -1,15 +1,31 @@
+/*------------------------------------BODY------------------------------------*/
 body {
   background-image: url(../img/bg_pc.webp);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
-  background-size: 100%;
   font-family: "Noto Sans", sans-serif;
   font-family: "Noto Sans JP", sans-serif;
+}
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url(../img/bg_sp.png);
+    background-position: center;
+  }
 }
 
 .main-visual p {
   width: 600px;
   height: auto;
   margin: 150px auto;
+}
+@media screen and (max-width: 768px) {
+  .main-visual p {
+    margin: 250px auto;
+    width: 75%;
+  }
 }
 
 /*------------------------------------HRADR------------------------------------*/
@@ -52,7 +68,7 @@ header .gnav_list li:nth-of-type(1) a::after {
   border-radius: 5px;
   margin-top: 15px;
   transform: translateX(-30px);
-  background-color: #D31176;
+  background-color: #C53B70;
 }
 header .gnav_list li:nth-of-type(2) a {
   font-family: "Noto Sans", sans-serif;
@@ -86,12 +102,19 @@ header .gnav_list li:nth-of-type(3) a::after {
   border-radius: 5px;
   margin-top: 12px;
   transform: translateX(-30px);
-  background-color: #E6B425;
+  background-color: #FAC000;
 }
 
+/*------------------------------------MAIN------------------------------------*/
 .wrapper {
-  width: 100%;
+  width: 1400px;
   margin: 0 auto;
+}
+@media screen and (max-width: 1450px) {
+  .wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 .wrapper section {
   margin-top: 250px;
@@ -99,6 +122,11 @@ header .gnav_list li:nth-of-type(3) a::after {
   /*------------------------------------NEWS------------------------------------*/
   /*------------------------------------CONTEST------------------------------------*/
   /*------------------------------------MAP------------------------------------*/
+}
+@media screen and (max-width: 768px) {
+  .wrapper section {
+    margin-top: 200px;
+  }
 }
 .wrapper section h1 {
   position: relative;
@@ -113,6 +141,14 @@ header .gnav_list li:nth-of-type(3) a::after {
   z-index: 1;
   transform: translateY(-40px);
 }
+@media screen and (max-width: 768px) {
+  .wrapper section h1 {
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 auto 50px;
+  }
+}
 .wrapper section h1::after {
   position: absolute;
   bottom: -40px;
@@ -122,7 +158,16 @@ header .gnav_list li:nth-of-type(3) a::after {
   width: 100%;
   height: 100%;
   background-image: url(../img/heading_back_p.webp);
+  background-size: 10%;
   z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .wrapper section h1::after {
+    bottom: -30px;
+    right: -25px;
+    width: 95%;
+    height: 70%;
+  }
 }
 .wrapper section .about {
   width: 90%;
@@ -130,10 +175,57 @@ header .gnav_list li:nth-of-type(3) a::after {
   background-color: rgba(255, 255, 255, 0.5);
   border: #C53B70 3px solid;
 }
-.wrapper section .about p {
+.wrapper section .about__area {
   width: 90%;
   margin: 0 auto;
-  margin-bottom: 120px;
+  display: flex;
+  padding-bottom: 120px;
+}
+@media screen and (max-width: 768px) {
+  .wrapper section .about__area {
+    display: block;
+    padding-bottom: 80px;
+  }
+}
+.wrapper section .about__area .cap {
+  width: 35%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .wrapper section .about__area .cap {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+}
+.wrapper section .about__area .greet {
+  overflow: auto;
+  width: 50%;
+  margin-left: 15%;
+  height: 350px;
+}
+@media screen and (max-width: 768px) {
+  .wrapper section .about__area .greet {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.wrapper section .about__area .greet h2 {
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .wrapper section .about__area .greet h2 {
+    text-align: center;
+  }
+}
+.wrapper section .about__area .greet p {
+  width: 100%;
+  margin: 0 auto 50px;
+  font-size: 18px;
 }
 .wrapper section .news {
   width: 90%;
@@ -142,6 +234,11 @@ header .gnav_list li:nth-of-type(3) a::after {
   background-color: rgba(255, 255, 255, 0.5);
   border: #1C96D4 3px solid;
 }
+@media screen and (max-width: 768px) {
+  .wrapper section .news {
+    padding-bottom: 80px;
+  }
+}
 .wrapper section .news h1 {
   background-color: #1C96D4;
 }
@@ -149,7 +246,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   background-image: url(../img/heading_back_b.webp);
 }
 .wrapper section .news__area {
-  width: 900px;
+  width: 70%;
   margin: 0 auto;
   border-top: #000 1px solid;
 }
@@ -165,6 +262,11 @@ header .gnav_list li:nth-of-type(3) a::after {
   border: #FAC000 3px solid;
   padding-bottom: 120px;
 }
+@media screen and (max-width: 768px) {
+  .wrapper section .contest {
+    padding-bottom: 80px;
+  }
+}
 .wrapper section .contest h1 {
   background-color: #FAC000;
 }
@@ -177,17 +279,89 @@ header .gnav_list li:nth-of-type(3) a::after {
   display: flex;
   justify-content: space-around;
 }
+@media screen and (max-width: 768px) {
+  .wrapper section .contest__art {
+    display: block;
+  }
+}
+.wrapper section .contest__art article {
+  position: relative;
+  background-color: #fff;
+  width: 31%;
+  height: 700px;
+  box-shadow: 5px 5px 15px #FAC000;
+}
+@media screen and (max-width: 768px) {
+  .wrapper section .contest__art article {
+    width: 95%;
+    height: auto;
+    padding-bottom: 10px;
+    margin: 50px auto 0;
+  }
+}
 .wrapper section .contest__art h2 {
+  height: 150px;
   font-size: 21px;
   font-weight: bold;
   text-align: center;
-  padding: 74px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.wrapper section .contest__art article {
-  background-color: #fff;
-  width: 375px;
-  height: 710px;
-  box-shadow: 5px 5px 15px #FAC000;
+@media screen and (max-width: 768px) {
+  .wrapper section .contest__art h2 {
+    height: 100px;
+  }
+}
+.wrapper section .contest__art p {
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .wrapper section .contest__art p:nth-of-type(1) {
+    text-align: center;
+  }
+}
+.wrapper section .contest__art p:nth-of-type(2) {
+  margin-top: 20px;
+  font-size: 14px;
+}
+@media screen and (max-width: 768px) {
+  .wrapper section .contest__art p:nth-of-type(2) {
+    width: 90%;
+  }
+}
+.wrapper section .contest__art p:nth-of-type(3) {
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  bottom: 70px;
+  font-size: 18px;
+  transform: translateX(10px);
+}
+@media screen and (max-width: 768px) {
+  .wrapper section .contest__art p:nth-of-type(3) {
+    position: static;
+    margin: 50px auto;
+    transform: translateX(0);
+  }
+}
+.wrapper section .contest__art p:nth-of-type(3) a {
+  display: block;
+  background-color: #FAC000;
+  width: 55%;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+@media screen and (max-width: 768px) {
+  .wrapper section .contest__art p:nth-of-type(3) a {
+    width: 200px;
+  }
 }
 .wrapper section .schedule {
   width: 90%;
@@ -195,6 +369,11 @@ header .gnav_list li:nth-of-type(3) a::after {
   background-color: rgba(255, 255, 255, 0.5);
   border: #348439 3px solid;
   padding-bottom: 120px;
+}
+@media screen and (max-width: 768px) {
+  .wrapper section .schedule {
+    padding-bottom: 80px;
+  }
 }
 .wrapper section .schedule h1 {
   background-color: #348439;
@@ -207,6 +386,31 @@ header .gnav_list li:nth-of-type(3) a::after {
 }
 .wrapper section .schedule .time img {
   width: 800px;
+  transform: translateX(10px);
+}
+.wrapper section .schedule .map__link {
+  margin-top: 100px;
+  color: #fff;
+  text-align: center;
+  bottom: 70px;
+  font-size: 18px;
+  transform: translateX(10px);
+}
+@media screen and (max-width: 768px) {
+  .wrapper section .schedule .map__link {
+    transform: translateX(0);
+    margin-top: 60px;
+  }
+}
+.wrapper section .schedule .map__link a {
+  background-color: #348439;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
 }
 
 /*------------------------------------SPONSOR------------------------------------*/
@@ -217,8 +421,14 @@ header .gnav_list li:nth-of-type(3) a::after {
   border: #C53B70 3px solid;
   padding-bottom: 120px;
 }
+@media screen and (max-width: 768px) {
+  .sponsor {
+    padding-bottom: 80px;
+  }
+}
 .sponsor div {
-  padding: 0 120px;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
 }
 .sponsor img {
@@ -245,37 +455,27 @@ footer p {
   font-family: "Noto Sans JP", sans-serif;
 }
 
-/*------------------------------------FOOTER------------------------------------*/
-footer {
-  width: 100%;
-  height: 112px;
-  margin-top: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #525252;
-}
-
-footer p {
-  text-align: center;
-  font-size: 13px;
-  color: #fff;
-  line-height: 24px;
-  font-family: "Noto Sans", sans-serif;
-  font-family: "Noto Sans JP", sans-serif;
-}
-
 /*---------------------------------MENU ANIMETION---------------------------------*/
 .menuAnime {
   animation-name: fadeInAnime;
   animation-duration: 0.8s;
   animation-fill-mode: forwards;
 }
+@media screen and (max-width: 768px) {
+  .menuAnime {
+    display: none;
+  }
+}
 
 .menuBackAnime {
   animation-name: fadeOutAnime;
   animation-duration: 0.8s;
   animation-fill-mode: forwards;
+}
+@media screen and (max-width: 768px) {
+  .menuBackAnime {
+    display: none;
+  }
 }
 
 @keyframes fadeInAnime {
