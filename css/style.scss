@@ -22,7 +22,8 @@ body {
     font-family: 'Noto Sans', sans-serif;
     font-family: 'Noto Sans JP', sans-serif;
     @include mq($sp) {
-        background-position: center -80px;
+        background-image: url(../img/bg_sp.png);
+        background-position: center;
     }
 }
 
@@ -32,6 +33,7 @@ body {
         height: auto;
         margin: 150px auto;
         @include mq($sp) {
+            margin: 250px auto;
             width: 75%;
             
         }    
@@ -77,7 +79,7 @@ header {
                             border-radius: 5px;
                             margin-top: 15px;
                             transform: translateX(-30px);
-                            background-color: #D31176;
+                            background-color: $red;
                         }
                     }
                 }
@@ -96,7 +98,7 @@ header {
                             border-radius: 5px;
                             margin-top: 12px;
                             transform: translateX(-30px);
-                            background-color: #348439;
+                            background-color: $green;
                         }
                     }
                 }
@@ -115,7 +117,7 @@ header {
                             border-radius: 5px;
                             margin-top: 12px;
                             transform: translateX(-30px);
-                            background-color: #E6B425;
+                            background-color: $yellow;
                         }
                     }
                 }
@@ -237,7 +239,7 @@ header {
             margin: 0 auto;
             padding-bottom: 120px;
             background-color: rgb(255, 255, 255, 0.5);
-            border: #1C96D4 3px solid;
+            border: $blue 3px solid;
             @include mq($sp) {
                 padding-bottom: 80px;
             }
@@ -378,7 +380,7 @@ header {
                 padding-bottom: 80px;
             }
             h1 {
-                background-color: #348439;
+                background-color: $green;
                 &::after {
                     background-image: url(../img/heading_back_g.webp);
                 }
