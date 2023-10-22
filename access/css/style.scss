@@ -1,15 +1,33 @@
 @charset "utf-8";
 
-body {
-    background-image: url(../img/bg_pc.webp);
-    background-size: 100%;
-    background-attachment: fixed;
-    background-color: rgba(255,255,255,.7);
-    background-blend-mode: lighten;
-    font-family: 'Noto Sans', sans-serif;
-    font-family: 'Noto Sans JP', sans-serif;
+$pc:1450;
+$sp:768;
+@mixin mq($bp){
+    @media screen and (max-width: #{$bp}px){
+        @content;
+    }
 }
 
+
+/*------------------------------------BODY------------------------------------*/
+body {
+    background-image: url(../img/bg_pc.webp);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: rgba(255,255,255,.7);
+    background-blend-mode: lighten;
+    @include mq($sp) {
+        background-image: url(../img/bg_sp.png);
+        background-position: center;
+    }
+}
+
+/*------------------------------------HRADR------------------------------------*/
 header {
     position: relative;
     top: 0;
@@ -95,6 +113,145 @@ header {
     }
 }
 
+/*------------------------------------MAIN------------------------------------*/
+.wrapper {
+    // position: relative;
+    width: 1400px;
+    margin: 0 auto;
+    @include mq($pc){
+        width: 100%;
+        margin: 0 auto;    
+    }
+    section {
+        margin-top: 250px;
+        margin-bottom: 150px;
+        @include mq($sp) {
+            margin-top: 200px;
+        }
+        // box-shadow: 0 0 10px rgba(10, 10, 10, .5);
+        // border: #FAC000 3px solid;   
+        .frame-top{
+            position: absolute;
+            right: 0;
+        }
+        .frame-under{
+            position: absolute;
+            bottom: 0;
+        }
+        h1 {
+            position: relative;
+            width: 260px;
+            height: 80px;
+            font-size: 22px;
+            text-align: center;
+            margin: 0 auto;
+            line-height: 80px;
+            margin: 0 auto 70px;
+            background-color: #FAC000;
+            color: #fff;
+            transform: translateY(-40px);
+            @include mq($sp) {
+                width: 180px;
+                height: 60px;
+                line-height: 60px;
+                margin: 0 auto 50px;
+            }
+            &::after {
+                position: absolute;
+                bottom: -40px;
+                right: -55px;
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-image: url(../img/heading_back.png);
+                z-index: -1;
+                @include mq($sp) {
+                    bottom: -30px;
+                    right: -25px;
+                    width: 95%;
+                    height: 70%;
+                }
+            }
+        }
+
+        /*------------------------------------ACCESS------------------------------------*/
+        .access {
+            width: 90%;
+            margin: 0 auto;
+            background-color: rgb(255, 255, 255, 0.5);
+            border: #FAC000 3px solid;
+            &-area {
+                width: 90%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 120px;
+                @include mq($sp) {
+                    display: block;
+                    padding-bottom: 80px;
+                }
+                .area-left {
+                    width: 50%;
+                    @include mq($sp) {
+                        width: 95%;
+                        margin: 0 auto;
+                    }
+                    .tec-container{
+                        display: flex;
+                        @include mq($sp) {
+                            width: 100%;
+                        }
+                        img{
+                            width: 150px;
+                            margin-right: 15px;
+                            @include mq($sp) {
+                                width: 100px;
+                            }
+                        }
+                        span{
+                            font-size: 36px;
+                            color:#0F1F58;
+                            @include mq($sp) {
+                                font-size: 4.5vw;
+                            }
+                        }
+                        .tec-name-ruby{
+                            font-size: 16px;
+                            @include mq($sp) {
+                                font-size: 2vw;
+                            }
+                        }
+                        
+                    }
+                    p {
+                        width: 95%;
+                        font-family: 'Noto Sans JP', sans-serif;
+                        margin: 50px 0 100px;
+                        line-height: 36px;
+                        font-size: 20px;
+                        @include mq($sp) {
+                            width: 100%;
+                            margin: 15px auto 75px;
+                            font-size: 3.5vw;
+                            line-height: 5vh;
+                        }
+                    }    
+                }
+                .area-right {
+                    width: 45%;
+                    @include mq($sp) {
+                        width: 100%;
+                        height: 300px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------FOOTER------------------------------------*/
 footer {
     width: 100%;
     height: 150px;
@@ -112,86 +269,11 @@ footer {
     }
 }
 
-.access {
-    .container {
-        position: relative;
-        height: 750px;
-        width: 90%;
-        margin: 0 auto;
-        background-color: rgb(255, 255, 255, 0.5);
-        box-shadow: 0 0 10px rgba(10, 10, 10, .5);
-        // border: #FAC000 3px solid;   
-        margin-top: 150px;
-        margin-bottom: 150px;
-        .frame-top{
-            position: absolute;
-            right: 0;
-        }
-        .frame-under{
-            position: absolute;
-            bottom: 0;
-        }
-        h1 {
-            position: relative;
-            width: 260px;
-            height: 80px;
-            font-size: 22px;
-            text-align: center;
-            margin: 0 auto;
-            line-height: 80px;
-            background-color: #FAC000;
-            color: #fff;
-            transform: translateY(-40px);
-            &::after {
-                position: absolute;
-                bottom: -40px;
-                right: -55px;
-                content: '';
-                display: block;
-                width: 100%;
-                height: 100%;
-                background-image: url(../img/heading_back.png);
-                z-index: -1;
-            }
-        }
-        .wrapper {
-            width: 90%;
-            margin: 110px auto 0 auto;
-            display: flex;
-            &-left {
-                width: 100%;
-                margin: 0 100px 0 auto;
-                .tec-container{
-                    display: flex;
-                    img{
-                        width: 150px;
-                    }
-                    span{
-                        font-size: 36px;
-                    }
-                    .tec-name-ruby{
-                        font-size: 16px;
-                    }
-                    
-                }
-                img {
-                    display: block;
-                }
-                p {
-                    font-family: 'Noto Sans JP', sans-serif;
-                    margin-top: 50px;
-                    line-height: 36px;
-                    font-size: 22px;
-                }
-                .map {
-                    display: block;
-                }
-            }
-        }
-    }
-}
 
-@media screen and (max-width: 1200px) {
+
+
+/*------------------------------------768------------------------------------*/
+@media screen and (max-width: 768px) {
     body {
         background-image: url(../img/bg_sp.png);
         background-size: 100%;
@@ -275,7 +357,7 @@ footer {
         }
     }
     
-    .access {
+    .wrapper {
         .h-menu {
             position: fixed;
             top:15px;
@@ -346,7 +428,7 @@ footer {
                     z-index: -1;
                 }
             }
-            .wrapper {
+            .access {
                 width: 318px;
                 display: flex;
                 flex-direction: column;
