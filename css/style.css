@@ -1,56 +1,3 @@
-/* 
-
-*/
-
-
-.arrows {
-  width: 60px;
-  height: 72px;
-  position: absolute;
-  left: 50%;
-  margin-left: -30px;
-  bottom: 19%;
-}
-
-.arrows path {
-  stroke: #2994D1;
-  fill: transparent;
-  stroke-width: 1px;  
-  animation: arrow 2s infinite;
-  -webkit-animation: arrow 2s infinite; 
-}
-
-@keyframes arrow
-{
-0% {opacity:0}
-40% {opacity:1}
-80% {opacity:0}
-100% {opacity:0}
-}
-
-@-webkit-keyframes arrow /*Safari and Chrome*/
-{
-0% {opacity:0}
-40% {opacity:1}
-80% {opacity:0}
-100% {opacity:0}
-}
-
-.arrows path.a1 {
-  animation-delay:-1s;
-  -webkit-animation-delay:-1s; /* Safari 和 Chrome */
-}
-
-.arrows path.a2 {
-  animation-delay:-0.5s;
-  -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
-}
-
-.arrows path.a3 { 
-  animation-delay:0s;
-  -webkit-animation-delay:0s; /* Safari 和 Chrome */
-}
-
 /*------------------------------------BODY------------------------------------*/
 body {
   background-image: url(../img/bg_pc.webp);
@@ -72,7 +19,7 @@ body {
 .main-visual p {
   width: 600px;
   height: auto;
-  margin: 150px auto 30px;
+  margin: 150px auto;
 }
 @media screen and (max-width: 768px) {
   .main-visual p {
@@ -243,7 +190,7 @@ header .gnav_list li:nth-of-type(3) a::after {
 .wrapper section .about__area .cap {
   width: 35%;
   font-size: 18px;
-  display: flex;
+  line-height: 1.8em;
   align-items: center;
 }
 @media screen and (max-width: 768px) {
@@ -251,6 +198,16 @@ header .gnav_list li:nth-of-type(3) a::after {
     width: 90%;
     margin: 0 auto;
     margin-bottom: 100px;
+  }
+}
+.wrapper section .about__area .cap h2 {
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .wrapper section .about__area .cap h2 {
+    text-align: center;
   }
 }
 .wrapper section .about__area .greet {
@@ -279,6 +236,15 @@ header .gnav_list li:nth-of-type(3) a::after {
   width: 100%;
   margin: 0 auto 50px;
   font-size: 18px;
+  line-height: 1.8em;
+}
+.wrapper section .about__area .greet em {
+  font-size: 20px;
+}
+.wrapper section .about__area .greet span {
+  font-size: 21px;
+  display: block;
+  text-align: right;
 }
 .wrapper section .news {
   width: 90%;
@@ -510,9 +476,12 @@ footer p {
 
 /*---------------------------------MENU ANIMETION---------------------------------*/
 .menuAnime {
-  animation-name: fadeInAnime;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 @media screen and (max-width: 768px) {
   .menuAnime {
@@ -521,13 +490,25 @@ footer p {
 }
 
 .menuBackAnime {
-  animation-name: fadeOutAnime;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: fadeOutAnime;
+          animation-name: fadeOutAnime;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 @media screen and (max-width: 768px) {
   .menuBackAnime {
     display: none;
+  }
+}
+
+@-webkit-keyframes fadeInAnime {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(100px);
   }
 }
 
@@ -537,6 +518,14 @@ footer p {
   }
   100% {
     transform: translateY(100px);
+  }
+}
+@-webkit-keyframes fadeOutAnime {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 @keyframes fadeOutAnime {
@@ -549,16 +538,33 @@ footer p {
 }
 /*---------------BACKGROUND OPACITY-------------------*/
 .bgLight {
-  animation-name: bgAnime;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: bgAnime;
+          animation-name: bgAnime;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
 .bgOrigin {
-  animation-name: bgAnimeReverse;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: bgAnimeReverse;
+          animation-name: bgAnimeReverse;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes bgAnime {
+  0% {
+    background-color: rgba(255, 255, 255, 0);
+    background-blend-mode: normal;
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.7);
+    background-blend-mode: lighten;
+  }
 }
 
 @keyframes bgAnime {
@@ -571,6 +577,16 @@ footer p {
     background-blend-mode: lighten;
   }
 }
+@-webkit-keyframes bgAnimeReverse {
+  0% {
+    background-color: rgba(255, 255, 255, 0.7);
+    background-blend-mode: lighten;
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+    background-blend-mode: normal;
+  }
+}
 @keyframes bgAnimeReverse {
   0% {
     background-color: rgba(255, 255, 255, 0.7);
@@ -581,4 +597,4 @@ footer p {
     background-blend-mode: normal;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */
