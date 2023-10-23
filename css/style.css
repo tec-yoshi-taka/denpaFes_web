@@ -9,7 +9,7 @@ body {
   font-family: "Noto Sans", sans-serif;
   font-family: "Noto Sans JP", sans-serif;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   body {
     background-image: url(../img/bg_sp.png);
     background-position: center;
@@ -21,7 +21,7 @@ body {
   height: auto;
   margin: 150px auto;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .main-visual p {
     margin: 250px auto;
     width: 75%;
@@ -107,10 +107,10 @@ header .gnav_list li:nth-of-type(3) a::after {
 
 /*------------------------------------MAIN------------------------------------*/
 .wrapper {
-  width: 1400px;
+  width: 1200px;
   margin: 0 auto;
 }
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1200px) {
   .wrapper {
     width: 100%;
     margin: 0 auto;
@@ -123,7 +123,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   /*------------------------------------CONTEST------------------------------------*/
   /*------------------------------------MAP------------------------------------*/
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .wrapper section {
     margin-top: 200px;
   }
@@ -141,7 +141,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   z-index: 1;
   transform: translateY(-40px);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .wrapper section h1 {
     width: 180px;
     height: 60px;
@@ -161,7 +161,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   background-size: 10%;
   z-index: -1;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .wrapper section h1::after {
     bottom: -30px;
     right: -25px;
@@ -181,7 +181,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   display: flex;
   padding-bottom: 120px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .wrapper section .about__area {
     display: block;
     padding-bottom: 80px;
@@ -193,7 +193,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   line-height: 1.8em;
   align-items: center;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .wrapper section .about__area .cap {
     width: 90%;
     margin: 0 auto;
@@ -205,7 +205,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   font-weight: bold;
   margin-bottom: 20px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .wrapper section .about__area .cap h2 {
     text-align: center;
   }
@@ -216,7 +216,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   margin-left: 15%;
   height: 350px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .wrapper section .about__area .greet {
     width: 90%;
     margin: 0 auto;
@@ -227,7 +227,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   font-weight: bold;
   margin-bottom: 20px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .wrapper section .about__area .greet h2 {
     text-align: center;
   }
@@ -253,7 +253,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   background-color: rgba(255, 255, 255, 0.5);
   border: #1C96D4 3px solid;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .wrapper section .news {
     padding-bottom: 80px;
   }
@@ -281,7 +281,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   border: #FAC000 3px solid;
   padding-bottom: 120px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .wrapper section .contest {
     padding-bottom: 80px;
   }
@@ -298,7 +298,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   display: flex;
   justify-content: space-around;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .wrapper section .contest__art {
     display: block;
   }
@@ -310,7 +310,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   height: 700px;
   box-shadow: 5px 5px 15px #FAC000;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .wrapper section .contest__art article {
     width: 95%;
     height: auto;
@@ -327,7 +327,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .wrapper section .contest__art h2 {
     height: 100px;
   }
@@ -337,7 +337,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   width: 95%;
   margin: 0 auto;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .wrapper section .contest__art p:nth-of-type(1) {
     text-align: center;
   }
@@ -346,7 +346,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   margin-top: 20px;
   font-size: 14px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .wrapper section .contest__art p:nth-of-type(2) {
     width: 90%;
   }
@@ -359,7 +359,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   font-size: 18px;
   transform: translateX(10px);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .wrapper section .contest__art p:nth-of-type(3) {
     position: static;
     margin: 50px auto;
@@ -369,7 +369,7 @@ header .gnav_list li:nth-of-type(3) a::after {
 .wrapper section .contest__art p:nth-of-type(3) a {
   display: block;
   background-color: #FAC000;
-  width: 55%;
+  width: 200px;
   height: 50px;
   margin: 0 auto;
   display: flex;
@@ -377,7 +377,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   align-items: center;
   border-radius: 30px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .wrapper section .contest__art p:nth-of-type(3) a {
     width: 200px;
   }
@@ -389,7 +389,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   border: #348439 3px solid;
   padding-bottom: 120px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .wrapper section .schedule {
     padding-bottom: 80px;
   }
@@ -415,7 +415,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   font-size: 18px;
   transform: translateX(10px);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .wrapper section .schedule .map__link {
     transform: translateX(0);
     margin-top: 60px;
@@ -440,7 +440,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   border: #C53B70 3px solid;
   padding-bottom: 120px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .sponsor {
     padding-bottom: 80px;
   }
@@ -476,39 +476,24 @@ footer p {
 
 /*---------------------------------MENU ANIMETION---------------------------------*/
 .menuAnime {
-  -webkit-animation-name: fadeInAnime;
-          animation-name: fadeInAnime;
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: fadeInAnime;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .menuAnime {
     display: none;
   }
 }
 
 .menuBackAnime {
-  -webkit-animation-name: fadeOutAnime;
-          animation-name: fadeOutAnime;
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: fadeOutAnime;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .menuBackAnime {
     display: none;
-  }
-}
-
-@-webkit-keyframes fadeInAnime {
-  0% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translateY(100px);
   }
 }
 
@@ -518,14 +503,6 @@ footer p {
   }
   100% {
     transform: translateY(100px);
-  }
-}
-@-webkit-keyframes fadeOutAnime {
-  0% {
-    transform: translateY(100px);
-  }
-  100% {
-    transform: translateY(0px);
   }
 }
 @keyframes fadeOutAnime {
@@ -538,33 +515,16 @@ footer p {
 }
 /*---------------BACKGROUND OPACITY-------------------*/
 .bgLight {
-  -webkit-animation-name: bgAnime;
-          animation-name: bgAnime;
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: bgAnime;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
 .bgOrigin {
-  -webkit-animation-name: bgAnimeReverse;
-          animation-name: bgAnimeReverse;
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes bgAnime {
-  0% {
-    background-color: rgba(255, 255, 255, 0);
-    background-blend-mode: normal;
-  }
-  100% {
-    background-color: rgba(255, 255, 255, 0.7);
-    background-blend-mode: lighten;
-  }
+  animation-name: bgAnimeReverse;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes bgAnime {
@@ -577,16 +537,6 @@ footer p {
     background-blend-mode: lighten;
   }
 }
-@-webkit-keyframes bgAnimeReverse {
-  0% {
-    background-color: rgba(255, 255, 255, 0.7);
-    background-blend-mode: lighten;
-  }
-  100% {
-    background-color: rgba(255, 255, 255, 0);
-    background-blend-mode: normal;
-  }
-}
 @keyframes bgAnimeReverse {
   0% {
     background-color: rgba(255, 255, 255, 0.7);
@@ -597,4 +547,4 @@ footer p {
     background-blend-mode: normal;
   }
 }
-/*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */

@@ -3,8 +3,7 @@ $blue:#1C96D4;
 $yellow:#FAC000;
 $green:#348439;
 
-$pc:1450;
-$sp:768;
+$sp:1200;
 @mixin mq($bp){
     @media screen and (max-width: #{$bp}px){
         @content;
@@ -128,9 +127,9 @@ header {
 
 /*------------------------------------MAIN------------------------------------*/
 .wrapper {
-    width: 1400px;
+    width: 1200px;
     margin: 0 auto;
-    @include mq($pc){
+    @include mq($sp){
             width: 100%;
             margin: 0 auto;    
     }
@@ -371,7 +370,7 @@ header {
                         a {
                             display: block;
                             background-color: $yellow;
-                            width: 55%;
+                            width: 200px;
                             height: 50px;
                             margin: 0 auto;
                             display: flex;
