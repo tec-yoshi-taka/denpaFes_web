@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アクセス</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="gnav">
+            <ul class="gnav_list">
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../mapbooth/index.html">MAP・BOOTH</a></li>
+                <li><a href="../access/index.html">ACCESS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="wrapper">       
+        <div class="h-menu">
+            <div class="h-menu-btn"></div>
+        </div>
+        <section>
+            <!-- <img class="frame-top" src="img/frame_top_y.webp" alt="" width="150"> -->
+            <div class="access">
+                <h1>ACCESS</h1>
+                <div class="access-area">
+                    <div class="area-left">
+                        <div class="tec-container">
+                            <img src="img/tec_logo.svg" alt="学校法人電波学園　東京電子専門学校">
+                            <div class="tec-name">
+                                <span>東京電子専門学校</span><br>
+                                <span class="tec-name-ruby">Tokyo Electronics College</span>
+                            </div>
+                        </div>
+                        <p>
+                            〒170-8418 東京都豊島区東池袋3-6-1<br>
+                            ⚫︎JR(山手線・埼京線・湘南新宿ライン)⚫︎東武東上線
+                            ⚫︎西武池袋線⚫︎東京メトロ丸の内線・有楽町線・副都心線<br>
+                            池袋駅東口から徒歩５~８分
+                        </p>
+                    </div>
+                    <div class="area-right">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.779029365501!2d139.71449977579002!3d35.73165262257101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d6f3f07b76b%3A0x89f2c0ef0e9ee79f!2z5a2m5qCh5rOV5Lq66Zu75rOi5a2m5ZyS5p2x5Lqs6Zu75a2Q5bCC6ZaA5a2m5qCh!5e0!3m2!1sja!2sjp!4v1697994614914!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            <!-- <img class="frame-under" src="img/frame_under_y.webp" alt="" width="150"> -->
+        </section>
+    </main>
+
+    <footer>
+        <p><small>©2022 TOKYO ELECTRONICS COLLEGE<br>制作・運営 学園祭実行委員会/ウェブ・メディア科</small></p>
+    </footer>
+    <script>
+        "use strict";
+        const hMenu = document.querySelector('.h-menu');
+        const header = document.querySelector('header');
+        hMenu.addEventListener('mousedown', () => {
+            header.classList.toggle('up');
+        });
+    </script>
+</body>
+</html>
