@@ -30,14 +30,12 @@ body {
     p {
         width: 600px;
         height: auto;
-        margin: 150px auto;
-        margin-bottom: 125px;
+        margin: 120px auto;
         @include mq($sp) {
-            margin: 250px auto 0;
+            margin: 250px auto 80px;
             width: 70%;
-            margin-bottom: 80px;
-            
-        }    
+            max-width: 500px;
+        }
     }
 }
 /*-----------スクロールを促すアニメーション----------*/
@@ -52,9 +50,6 @@ body {
 	// bottom:10px;
     /*全体の高さ*/
 	height:150px;
-    @include mq($sp) {
-
-    }
 }
 
 /*Scrollテキストの描写*/
@@ -68,9 +63,7 @@ body {
 	color: #000;
 	font-size: 1.5rem;
 	letter-spacing: 0.05em;
-    @include mq($sp) {
-
-    }
+        text-shadow: 2px 2px 3px #fff;
 }
 
 /* 線の描写 */
@@ -353,8 +346,13 @@ header {
                     display: flex;
                     padding: 30px 0;
                     border-bottom: #000 1px solid;
+                    @include mq($sp) {
+                        width: 97%;
+                        margin: 0 auto;
+                        font-size: 12px;
+                    }
                     dt {
-                        margin-left: 20px;
+                        margin-right: 10px;
                     }
                 }
             }

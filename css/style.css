@@ -20,14 +20,13 @@ body {
 .main-visual p {
   width: 600px;
   height: auto;
-  margin: 150px auto;
-  margin-bottom: 125px;
+  margin: 120px auto;
 }
 @media screen and (max-width: 1200px) {
   .main-visual p {
-    margin: 250px auto 0;
+    margin: 250px auto 80px;
     width: 70%;
-    margin-bottom: 80px;
+    max-width: 500px;
   }
 }
 
@@ -44,6 +43,7 @@ body {
   /*全体の高さ*/
   height: 150px;
 }
+
 /*Scrollテキストの描写*/
 .scrolldown1 span {
   /*描画位置*/
@@ -55,7 +55,9 @@ body {
   color: #000;
   font-size: 1.5rem;
   letter-spacing: 0.05em;
+  text-shadow: 2px 2px 3px #fff;
 }
+
 /* 線の描写 */
 .scrolldown1::after {
   content: "";
@@ -335,8 +337,15 @@ header .gnav_list li:nth-of-type(3) a::after {
   padding: 30px 0;
   border-bottom: #000 1px solid;
 }
+@media screen and (max-width: 1200px) {
+  .wrapper section .news__area dl {
+    width: 97%;
+    margin: 0 auto;
+    font-size: 12px;
+  }
+}
 .wrapper section .news__area dl dt {
-  margin-left: 20px;
+  margin-right: 10px;
 }
 .wrapper section .contest {
   width: 90%;
