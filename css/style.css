@@ -339,13 +339,18 @@ header .gnav_list li:nth-of-type(3) a::after {
 }
 @media screen and (max-width: 1200px) {
   .wrapper section .news__area dl {
-    width: 97%;
     margin: 0 auto;
     font-size: 12px;
   }
 }
 .wrapper section .news__area dl dt {
+  margin-left: 20px;
   margin-right: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .wrapper section .news__area dl dt {
+    margin-left: 0;
+  }
 }
 .wrapper section .contest {
   width: 90%;
