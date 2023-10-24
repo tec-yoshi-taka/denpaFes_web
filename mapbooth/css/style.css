@@ -146,17 +146,6 @@ footer p {
 }
 
 /*------------------------------------MAIN------------------------------------*/
-@-webkit-keyframes close {
-  0% {
-    transform: translateY(-6px);
-  }
-  50% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: rotateZ(40deg);
-  }
-}
 @keyframes close {
   0% {
     transform: translateY(-6px);
@@ -208,8 +197,7 @@ main {
     transform: translateY(4px);
   }
   main .h-menu-btn.up::before {
-    -webkit-animation: close forwards 0.3s ease 0s normal;
-            animation: close forwards 0.3s ease 0s normal;
+    animation: close forwards 0.3s ease 0s normal;
   }
   main .h-menu-btn.up::after {
     transform: translateY(-2px) rotateZ(-40deg);
