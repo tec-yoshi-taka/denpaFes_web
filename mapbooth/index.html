@@ -22,6 +22,9 @@
     </header>
 
     <main>
+        <div class="h-menu">
+            <div class="h-menu-btn"></div>
+        </div>
         <div class="container-booth">
             <div class="h1_back">
                 <h1>BOOTH</h1>
@@ -51,7 +54,7 @@
                             <div class="plan_inner">
                                 <div class="title">
                                     <div class="no">2</div>
-                                    <h3>誰でも楽しく！みんなで三輪車競走</h3>
+                                    <h3 class="break"><span class="sub">誰でも楽しく！</span><br>みんなで三輪車競走</h3>
                                 </div>
                                 <p class="place">2号館8階</p>
                                 <img src="img/boxa.png" alt="">
@@ -82,7 +85,7 @@
                             <div class="plan_inner">
                                 <div class="title">
                                     <div class="no">4</div>
-                                    <h3>もっと学校を知ろう！「入学相談コーナー」</h3>
+                                    <h3 class="break"><span class="sub">もっと学校を知ろう！</span><br>「入学相談コーナー」</h3>
                                 </div>
                                 <p class="place">2号館1階</p>
                                 <img src="img/boxa.png" alt="">
@@ -144,7 +147,7 @@
                             <div class="plan_inner">
                                 <div class="title">
                                     <div class="no">8</div>
-                                    <h3>フォトスポット ~ あなたの需要に答えます ~</h3>
+                                    <h3 class="break">フォトスポット<br> <span class="sub">~ あなたの需要に答えます ~</span></h3>
                                 </div>
                                 <p class="place">2号館1階</p>
                                 <img src="img/boxa.png" alt="">
@@ -197,7 +200,7 @@
                             <div class="plan_inner">
                                 <div class="title">
                                     <div class="no">2</div>
-                                    <h3>T前期作品展示会</h3>
+                                    <h3>前期作品展示会</h3>
                                 </div>
                                 <p class="place">2号館7階</p>
                                 <img src="img/boxa.png" alt="">
@@ -288,7 +291,7 @@
                             <div class="plan_inner">
                                 <div class="title">
                                     <div class="no">8</div>
-                                    <h3>もう一つのデンパガクエン～謎解きゲーム～</h3>
+                                    <h3 class="break">もう一つのデンパガクエン<br><span class="sub">～ 謎解きゲーム ～</span></h3>
                                 </div>
                                 <p class="place">1号館12階</p>
                                 <img src="img/boxa.png" alt="">
@@ -376,7 +379,7 @@
                             <div class="plan_inner">
                                 <div class="title">
                                     <div class="no">14</div>
-                                    <h3>休憩処（テーブルゲーム、スムージー）</h3>
+                                    <h3 class="break">休憩処<br><span class="sub">（テーブルゲーム、スムージー）</span></h3>
                                 </div>
                                 <p class="place">5号館1・3階</p>
                                 <img src="img/boxa.png" alt="">
@@ -577,7 +580,7 @@
                 <h1>MAP</h1>
             </div>
             <div class="map_wrap">
-                <img class="map_img" src="img/fes_map.webp" alt="">
+                <div class="map_img"></div>
             </div>
         </div>
     </main>
@@ -589,8 +592,10 @@
         "use strict";
         const hMenu = document.querySelector('.h-menu');
         const header = document.querySelector('header');
+        const hMenuBtn = document.querySelector('.h-menu-btn');
         hMenu.addEventListener('mousedown', () => {
             header.classList.toggle('up');
+            hMenuBtn.classList.toggle('up');
         });
     </script>
 </body>
