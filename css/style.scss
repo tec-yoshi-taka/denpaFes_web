@@ -251,7 +251,7 @@ header {
         .about {
             width: 90%;
             margin: 0 auto;
-            background-color: rgb(255, 255, 255, 0.5);
+            background-color: rgb(255, 255, 255, 0.8);
             border: $red 3px solid;
             &__area{
                 width: 90%;
@@ -331,7 +331,7 @@ header {
             width: 90%;
             margin: 0 auto;
             padding-bottom: 120px;
-            background-color: rgb(255, 255, 255, 0.5);
+            background-color: rgb(255, 255, 255, 0.8);
             border: $blue 3px solid;
             @include mq($sp) {
                 padding-bottom: 80px;

@@ -236,7 +236,7 @@ header .gnav_list li:nth-of-type(3) a::after {
 .wrapper section .about {
   width: 90%;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   border: #C53B70 3px solid;
 }
 .wrapper section .about__area {
@@ -323,7 +323,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   width: 90%;
   margin: 0 auto;
   padding-bottom: 120px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   border: #1C96D4 3px solid;
 }
 @media screen and (max-width: 1200px) {
