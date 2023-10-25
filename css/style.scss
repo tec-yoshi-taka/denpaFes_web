@@ -4,6 +4,7 @@ $yellow:#FAC000;
 $green:#348439;
 
 $sp:1200;
+$sp-s:500;
 @mixin mq($bp){
     @media screen and (max-width: #{$bp}px){
         @content;
@@ -388,19 +389,36 @@ header {
                 @include mq($sp) {
                     display: block;
                 }
-
                 article {
                     position: relative;
                     background-color: #fff;
                     width: 31%;
                     height: 700px;
-                    box-shadow: 5px 5px 15px $yellow;
+                    
                     @include mq($sp) {
                         width: 95%;
                         height: auto;
                         padding-bottom: 10px;
                         margin: 50px auto 0;
-                    }    
+                    }
+                }
+                .yellow {
+                    box-shadow: 5px 5px 15px $yellow;
+                    a {
+                        background-color: $yellow;
+                    }
+                }
+                .blue {
+                    box-shadow: 5px 5px 15px $blue;
+                    a {
+                        background-color: $blue;
+                    }
+                }
+                .red {
+                    box-shadow: 5px 5px 15px $red;
+                    a {
+                        background-color: $red;
+                    }
                 }
 
                 h2 {
@@ -445,7 +463,6 @@ header {
                         }
                         a {
                             display: block;
-                            background-color: $yellow;
                             width: 200px;
                             height: 50px;
                             margin: 0 auto;
@@ -521,20 +538,142 @@ header {
     @include mq($sp) {
         padding-bottom: 80px;
     }
-
-
-    div {
-        width: 90%;
-        margin: 0 auto;
-        display: flex;
-    }
-
-    img {
-        max-height: 280px;
-        padding: 0 3px;
+    .spnseor__area {
+        display: grid;
+        padding: 40px;
+        font-family: "BaseFont",sans-serif;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 5px;
+        @include mq($sp) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(5, 1fr);    
+        }
+        @include mq($sp-s) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(7, 1fr);
+        }
+        img {
+            height: 100%;
+            width: 100%;
+        }
+        .item01 {
+            grid-column: 1/3;
+            grid-row: inherit;
+            @include mq($sp-s) {
+                grid-column: 1/3;
+                grid-row: 1/2;    
+            }
+        }
+        .item02 {
+            grid-column: 3/5;
+            grid-row: inherit;
+            @include mq($sp) {
+                grid-column: 1/3;
+                grid-row: 2/3;
+            }
+            @include mq($sp-s) {
+                grid-column: 1/3;
+                grid-row: 2/3;    
+            }
+        }
+        .item03{
+            grid-column: 5/6;
+            grid-row: inherit;
+            @include mq($sp) {
+                grid-column: 3/4;
+                grid-row: 1/2;    
+            }
+            @include mq($sp-s) {
+                grid-column: 1/2;
+                grid-row: 3/4;    
+            }
+        }
+        .item04{
+            grid-column: 1/2;
+            grid-row: inherit;
+            @include mq($sp) {
+                grid-column: 3/4;
+                grid-row: 2/3;    
+            }
+            @include mq($sp-s) {
+                grid-column: 2/3;
+                grid-row: 3/4;    
+            }
+        }
+        .item05{
+            grid-column: 2/3;
+            grid-row: inherit;
+            @include mq($sp) {
+                grid-column: 1/2;
+                grid-row: 3/4;    
+            }
+            @include mq($sp-s) {
+                grid-column: 1/2;
+                grid-row: 5/6;
+            }
+        }
+        .item06 {
+            grid-column: 3/5;
+            grid-row: inherit;
+            @include mq($sp) {
+                grid-column: 2/4;
+                grid-row: 3/4;
+            }
+            @include mq($sp-s) {
+                grid-column: 1/3;
+                grid-row: 4/5;    
+            }
+        } 
+        .item07{
+            grid-row: inherit;
+            @include mq($sp) {
+                grid-column: 1/2;
+                grid-row: 4/5;
+            }
+            @include mq($sp-s) {
+                grid-column: 1/2;
+                grid-row: 5/6;    
+            }
+        }
+        .item08 {
+            grid-column: 1/3;
+            grid-row: inherit;
+            @include mq($sp) {
+                grid-column: 2/4;
+                grid-row: 4/5;
+            }
+            @include mq($sp-s) {
+                grid-column: 1/3;
+                grid-row: 6/7;    
+            }
+        }
+        .item09{
+            grid-column: 3/5;
+            grid-row: inherit;
+            @include mq($sp) {
+                grid-column: 2/4;
+                grid-row: 5/6;
+            }
+            @include mq($sp-s) {
+                grid-column: 1/3;
+                grid-row: 7/8;    
+            }
+        }
+        .item010{
+            grid-column: 5/6;
+            grid-row: inherit;
+            @include mq($sp) {
+                grid-column: 3/4;
+                grid-row: 5/6;
+            }
+            @include mq($sp-s) {
+                grid-column: 2/3;
+                grid-row: 5/6;    
+            }
+        }
     }
 }
-
 /*------------------------------------FOOTER------------------------------------*/
 footer {
     width: 100%;
