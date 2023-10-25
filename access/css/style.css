@@ -28,6 +28,23 @@ header {
   position: fixed;
   z-index: 999;
 }
+@media screen and (max-width: 1200px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    z-index: 500;
+    transition: transform 0.3s linear;
+  }
+}
 header .gnav_list {
   margin: 0 auto;
   width: 65%;
@@ -94,6 +111,27 @@ header .gnav_list li:nth-of-type(3) a::after {
   transform: translateX(-30px);
   background-color: #E6B425;
 }
+@media screen and (max-width: 1200px) {
+  header .gnav_list {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  header .gnav_list li {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "sans-serif";
+  }
+  header .gnav_list li a {
+    font-family: "Noto Sans", sans-serif;
+  }
+}
+header.up {
+  transform: translateY(0);
+}
 
 /*------------------------------------MAIN------------------------------------*/
 .wrapper {
@@ -104,6 +142,54 @@ header .gnav_list li:nth-of-type(3) a::after {
   .wrapper {
     width: 100%;
     margin: 0 auto;
+  }
+}
+@media screen and (max-width: 1200px) and (max-width: 1200px) {
+  .wrapper .h-menu {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    z-index: 999;
+    transition: background-color 0.1s linear;
+  }
+  .wrapper .h-menu-btn {
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background-color: #D31176;
+  }
+  .wrapper .h-menu-btn::before, .wrapper .h-menu-btn::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #D31176;
+  }
+  .wrapper .h-menu-btn::before {
+    transform: translateY(-6px);
+  }
+  .wrapper .h-menu-btn::after {
+    transform: translateY(4px);
+  }
+  .wrapper .h-menu-btn.up {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .wrapper .h-menu-btn.up::before {
+    transform: translateY(0px) rotateZ(40deg);
+  }
+  .wrapper .h-menu-btn.up::after {
+    transform: translateY(-2px) rotateZ(-40deg);
+  }
+  .wrapper .h-menu:hover {
+    background-color: rgb(255, 255, 255);
   }
 }
 .wrapper section {
