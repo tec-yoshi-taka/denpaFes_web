@@ -64,8 +64,10 @@
         "use strict";
         const hMenu = document.querySelector('.h-menu');
         const header = document.querySelector('header');
+        const hMenuBtn = document.querySelector('.h-menu-btn');
         hMenu.addEventListener('mousedown', () => {
             header.classList.toggle('up');
+            hMenuBtn.classList.toggle('up');
         });
     </script>
 </body>
