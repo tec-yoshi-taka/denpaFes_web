@@ -9,15 +9,18 @@ $sp:1200;
 
 body {
     background-image: url(../img/bg_pc.webp);
-    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Noto Sans', sans-serif;
     font-family: 'Noto Sans JP', sans-serif;
+    background-color: rgba(255,255,255,.7);
+    background-blend-mode: lighten;
     @include mq($sp) {
         background-image: url(../img/bg_sp.png);
-
+        background-position: center;
     }
 }
 
@@ -222,8 +225,7 @@ main {
     width: 1200px;
     margin: 0 auto;
     margin-top: 145px;
-    background-color: rgba(255, 255, 255, .8);
-    box-shadow: 0 0 10px rgba(10, 10, 10, .5);
+    background-color: rgba(255, 255, 255, .5);
     padding-bottom: 90px;
     border: solid 3px #348439;
     @include mq($sp){
