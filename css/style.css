@@ -279,6 +279,15 @@ header .gnav_list li:nth-of-type(3) a::after {
   margin-left: 15%;
   height: 350px;
 }
+.wrapper section .about__area .greet::-webkit-scrollbar {
+  width: 10px;
+  background: #848484;
+  border-radius: 20px;
+}
+.wrapper section .about__area .greet::-webkit-scrollbar-thumb {
+  background: #D9D9D9;
+  border-radius: 20px;
+}
 @media screen and (max-width: 1200px) {
   .wrapper section .about__area .greet {
     width: 90%;
