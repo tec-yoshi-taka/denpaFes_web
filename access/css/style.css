@@ -11,7 +11,7 @@ body {
   background-color: rgba(255, 255, 255, 0.7);
   background-blend-mode: lighten;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   body {
     background-image: url(../img/bg_sp.png);
     background-position: center;
@@ -27,23 +27,6 @@ header {
   background-color: rgba(255, 255, 255, 0.8);
   position: fixed;
   z-index: 999;
-}
-@media screen and (max-width: 1200px) {
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: unset;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(-100%);
-    z-index: 500;
-    transition: transform 0.3s linear;
-  }
 }
 header .gnav_list {
   margin: 0 auto;
@@ -111,85 +94,16 @@ header .gnav_list li:nth-of-type(3) a::after {
   transform: translateX(-30px);
   background-color: #E6B425;
 }
-@media screen and (max-width: 1200px) {
-  header .gnav_list {
-    width: 100%;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-  }
-  header .gnav_list li {
-    font-size: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: "sans-serif";
-  }
-  header .gnav_list li a {
-    font-family: "Noto Sans", sans-serif;
-  }
-}
-header.up {
-  transform: translateY(0);
-}
 
 /*------------------------------------MAIN------------------------------------*/
 .wrapper {
-  width: 1200px;
+  width: 1400px;
   margin: 0 auto;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1450px) {
   .wrapper {
     width: 100%;
     margin: 0 auto;
-  }
-}
-@media screen and (max-width: 1200px) and (max-width: 1200px) {
-  .wrapper .h-menu {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.8);
-    cursor: pointer;
-    z-index: 999;
-    transition: background-color 0.1s linear;
-  }
-  .wrapper .h-menu-btn {
-    position: relative;
-    width: 30px;
-    height: 2px;
-    background-color: #D31176;
-  }
-  .wrapper .h-menu-btn::before, .wrapper .h-menu-btn::after {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 2px;
-    background-color: #D31176;
-  }
-  .wrapper .h-menu-btn::before {
-    transform: translateY(-6px);
-  }
-  .wrapper .h-menu-btn::after {
-    transform: translateY(4px);
-  }
-  .wrapper .h-menu-btn.up {
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-  .wrapper .h-menu-btn.up::before {
-    transform: translateY(0px) rotateZ(40deg);
-  }
-  .wrapper .h-menu-btn.up::after {
-    transform: translateY(-2px) rotateZ(-40deg);
-  }
-  .wrapper .h-menu:hover {
-    background-color: rgb(255, 255, 255);
   }
 }
 .wrapper section {
@@ -197,7 +111,7 @@ header.up {
   margin-bottom: 150px;
   /*------------------------------------ACCESS------------------------------------*/
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .wrapper section {
     margin-top: 200px;
   }
@@ -223,7 +137,7 @@ header.up {
   color: #fff;
   transform: translateY(-40px);
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .wrapper section h1 {
     width: 180px;
     height: 60px;
@@ -242,7 +156,7 @@ header.up {
   background-image: url(../img/heading_back.png);
   z-index: -1;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .wrapper section h1::after {
     bottom: -30px;
     right: -25px;
@@ -263,7 +177,7 @@ header.up {
   justify-content: space-between;
   padding-bottom: 120px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .wrapper section .access-area {
     display: block;
     padding-bottom: 80px;
@@ -272,18 +186,16 @@ header.up {
 .wrapper section .access-area .area-left {
   width: 50%;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .wrapper section .access-area .area-left {
-    width: 75%;
-    text-align: center;
+    width: 95%;
     margin: 0 auto;
   }
 }
 .wrapper section .access-area .area-left .tec-container {
   display: flex;
-  justify-content: center;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .wrapper section .access-area .area-left .tec-container {
     width: 100%;
   }
@@ -292,7 +204,7 @@ header.up {
   width: 150px;
   margin-right: 15px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .wrapper section .access-area .area-left .tec-container img {
     width: 100px;
   }
@@ -301,18 +213,17 @@ header.up {
   font-size: 36px;
   color: #0F1F58;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .wrapper section .access-area .area-left .tec-container span {
-    font-size: min(4.5vw, 24px);
+    font-size: 4.5vw;
   }
 }
 .wrapper section .access-area .area-left .tec-container .tec-name-ruby {
   font-size: 16px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .wrapper section .access-area .area-left .tec-container .tec-name-ruby {
     font-size: 2vw;
-    font-size: min(2vw, 12px);
   }
 }
 .wrapper section .access-area .area-left p {
@@ -322,21 +233,21 @@ header.up {
   line-height: 36px;
   font-size: 20px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .wrapper section .access-area .area-left p {
     width: 100%;
     margin: 15px auto 75px;
-    font-size: min(3.5vw, 18px);
+    font-size: 3.5vw;
     line-height: 5vh;
   }
 }
 .wrapper section .access-area .area-right {
   width: 45%;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .wrapper section .access-area .area-right {
-    height: 500px;
     width: 100%;
+    height: 300px;
     margin: 0 auto;
   }
 }
@@ -344,8 +255,7 @@ header.up {
 /*------------------------------------FOOTER------------------------------------*/
 footer {
   width: 100%;
-  height: 112px;
-  margin-top: 150px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -353,9 +263,181 @@ footer {
 }
 footer p {
   text-align: center;
-  font-size: 13px;
+  font-size: 18px;
   color: #fff;
-  line-height: 24px;
+  line-height: 34px;
   font-family: "Noto Sans", sans-serif;
   font-family: "Noto Sans JP", sans-serif;
+}
+
+/*------------------------------------768------------------------------------*/
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url(../img/bg_sp.png);
+    background-size: 100%;
+    font-family: "Noto Sans", sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scaleY(0);
+    z-index: 500;
+    transition: transform 0.3s linear;
+  }
+  header .gnav_list {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  header .gnav_list li {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "sans-serif";
+  }
+  header .gnav_list li::after {
+    content: "";
+    display: block;
+    width: calc(100% + 60px);
+    height: 12px;
+    border-radius: 6px;
+    margin-top: 15px;
+  }
+  header .gnav_list li:nth-of-type(1)::after {
+    background-color: #C53B70;
+  }
+  header .gnav_list li:nth-of-type(2)::after {
+    background-color: #348439;
+  }
+  header .gnav_list li:nth-of-type(3)::after {
+    background-color: #FAC000;
+  }
+  header .gnav_list li a {
+    font-family: "Noto Sans", sans-serif;
+  }
+  header.up {
+    transform: scaleY(100%);
+  }
+  footer {
+    width: 100%;
+    height: 112px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #525252;
+  }
+  footer p {
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    line-height: 24px;
+    font-family: "Noto Sans", sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
+  }
+  .wrapper .h-menu {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    cursor: pointer;
+    z-index: 999;
+  }
+  .wrapper .h-menu-btn {
+    width: 30px;
+    height: 2px;
+    background-color: #D31176;
+  }
+  .wrapper .h-menu-btn::before, .wrapper .h-menu-btn::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #D31176;
+  }
+  .wrapper .h-menu-btn::before {
+    transform: translateY(-8px);
+  }
+  .wrapper .h-menu-btn::after {
+    transform: translateY(6px);
+  }
+  .wrapper .frame-top {
+    position: absolute;
+    top: 114px;
+  }
+  .wrapper .container {
+    position: relative;
+    width: 360px;
+    margin: 0 auto;
+    margin-top: 117px;
+    margin-bottom: 69px;
+    background-color: #fff;
+    z-index: -2;
+    padding-top: 47px;
+    padding-bottom: 47px;
+  }
+  .wrapper .container h1 {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #FAC000;
+    color: #fff;
+    margin: 0 auto;
+  }
+  .wrapper .container h1::after {
+    position: absolute;
+    bottom: -20px;
+    right: -29px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/heading_back.png);
+    background-size: 10px;
+    z-index: -1;
+  }
+  .wrapper .container .access {
+    width: 318px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 56px;
+  }
+  .wrapper .container .access-left {
+    width: 100%;
+  }
+  .wrapper .container .access-left img {
+    display: block;
+    height: 67px;
+  }
+  .wrapper .container .access-left p {
+    font-family: "Noto Sans JP", sans-serif;
+    margin-top: 25px;
+    margin-bottom: 44px;
+    line-height: 22px;
+    font-size: 12px;
+  }
+  .wrapper .container .access-left .map {
+    display: block;
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
