@@ -9,8 +9,7 @@ body::before {
   position: fixed;
   z-index: -2;
   content: "";
-  font-family: "Noto Sans", sans-serif;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Sans", "Noto Sans JP", sans-serif;
 }
 @media screen and (max-width: 1200px) {
   body::before {
