@@ -8,19 +8,29 @@ $sp:1200;
 }
 
 body {
-    background-image: url(../img/bg_pc.webp);
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    font-family: 'Noto Sans', sans-serif;
-    font-family: 'Noto Sans JP', sans-serif;
-    background-color: rgba(255,255,255,.7);
-    background-blend-mode: lighten;
-    @include mq($sp) {
-        background-image: url(../img/bg_sp.png);
-        background-position: center;
+    &::before,
+    &::after {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        content: '';
+    }
+
+    &::before {
+        background: url(../img/bg_pc.webp) center/cover;
+        z-index: -2;
+        font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+        @include mq($sp) {
+            background-image: url(../img/bg_sp.png);
+            background-position: center;
+        }
+    }
+
+    &::after {
+        z-index: -1;
+        background-color: rgba(255, 255, 255, .5);
     }
 }
 

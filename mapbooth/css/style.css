@@ -1,20 +1,25 @@
-body {
-  background-image: url(../img/bg_pc.webp);
+body::before, body::after {
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  font-family: "Noto Sans", sans-serif;
-  font-family: "Noto Sans JP", sans-serif;
-  background-color: rgba(255, 255, 255, 0.7);
-  background-blend-mode: lighten;
+  position: fixed;
+  content: "";
+}
+body::before {
+  background: url(../img/bg_pc.webp) center/cover;
+  z-index: -2;
+  font-family: "Noto Sans", "Noto Sans JP", sans-serif;
 }
 @media screen and (max-width: 1200px) {
-  body {
+  body::before {
     background-image: url(../img/bg_sp.png);
     background-position: center;
   }
+}
+body::after {
+  z-index: -1;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 /*------------------------------------HEADER------------------------------------*/
