@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*------------------------------------BODY------------------------------------*/
 body::before {
-  background-image: url(../img/bg_pc.webp);
+  background: url(../img/bg_pc.webp) center/cover;
   top: 0;
   left: 0;
   height: 100%;
@@ -9,9 +9,6 @@ body::before {
   position: fixed;
   z-index: -2;
   content: "";
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   font-family: "Noto Sans", sans-serif;
   font-family: "Noto Sans JP", sans-serif;
 }
