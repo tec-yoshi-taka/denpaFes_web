@@ -1,9 +1,14 @@
 @charset "UTF-8";
 /*------------------------------------BODY------------------------------------*/
-body {
+body::before {
   background-image: url(../img/bg_pc.webp);
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
+  position: fixed;
+  z-index: -1;
+  content: "";
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -11,7 +16,7 @@ body {
   font-family: "Noto Sans JP", sans-serif;
 }
 @media screen and (max-width: 1200px) {
-  body {
+  body::before {
     background-image: url(../img/bg_sp.png);
     background-position: center;
   }

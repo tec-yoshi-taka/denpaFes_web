@@ -12,10 +12,15 @@ $sp-s:500;
 }
 
 /*------------------------------------BODY------------------------------------*/
-body {
+body::before {
     background-image: url(../img/bg_pc.webp);
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
+    position: fixed;
+    z-index: -1;
+    content: '';
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
