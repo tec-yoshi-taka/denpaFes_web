@@ -10,19 +10,29 @@ $sp:1200;
 
 /*------------------------------------BODY------------------------------------*/
 body {
-    background-image: url(../img/bg_pc.webp);
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    font-family: 'Noto Sans', sans-serif;
-    font-family: 'Noto Sans JP', sans-serif;
-    background-color: rgba(255,255,255,.7);
-    background-blend-mode: lighten;
-    @include mq($sp) {
-        background-image: url(../img/bg_sp.png);
-        background-position: center;
+    &::before,
+    &::after {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        content: '';
+    }
+
+    &::before {
+        background: url(../img/bg_pc.webp) center/cover;
+        z-index: -2;
+        font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+        @include mq($sp) {
+            background-image: url(../img/bg_sp.png);
+            background-position: center;
+        }
+    }
+
+    &::after {
+        z-index: -1;
+        background-color: rgba(255, 255, 255, .5);
     }
 }
 
@@ -178,7 +188,7 @@ header {
         .access {
             width: 100%;
             margin: 0 auto;
-            background-color: rgb(255, 255, 255, 0.5);
+            background-color: rgb(255, 255, 255, 0.8);
             border: #FAC000 3px solid;
             &-area {
                 width: 90%;
@@ -193,11 +203,13 @@ header {
                 .area-left {
                     width: 50%;
                     @include mq($sp) {
-                        width: 95%;
+                        width: 75%;
+                        text-align: center;
                         margin: 0 auto;
                     }
                     .tec-container{
                         display: flex;
+                        justify-content: center;
                         @include mq($sp) {
                             width: 100%;
                         }
@@ -212,13 +224,13 @@ header {
                             font-size: 36px;
                             color:#0F1F58;
                             @include mq($sp) {
-                                font-size: 4.5vw;
+                                font-size:min(4.5vw,24);
                             }
                         }
                         .tec-name-ruby{
                             font-size: 16px;
                             @include mq($sp) {
-                                font-size: 2vw;
+                                font-size:min(2vw, 12px);
                             }
                         }
                         
@@ -232,7 +244,7 @@ header {
                         @include mq($sp) {
                             width: 100%;
                             margin: 15px auto 75px;
-                            font-size: 3.5vw;
+                            font-size:min(3.5vw, 18px);
                             line-height: 5vh;
                         }
                     }    
@@ -241,7 +253,7 @@ header {
                     width: 45%;
                     @include mq($sp) {
                         width: 100%;
-                        height: 300px;
+                        height: 500px;
                         margin: 0 auto;
                     }
                 }
