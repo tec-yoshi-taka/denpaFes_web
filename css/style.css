@@ -217,6 +217,52 @@ header.up {
     width: 90%;
     margin: 0 auto;
   }
+  .wrapper .h-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    z-index: 999;
+    transition: background-color 0.1s linear;
+  }
+  .wrapper .h-menu-btn {
+    position: relative;
+    width: 40px;
+    height: 4px;
+    background-color: #D31176;
+  }
+  .wrapper .h-menu-btn::before, .wrapper .h-menu-btn::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: #D31176;
+  }
+  .wrapper .h-menu-btn::before {
+    transform: translateY(-10px);
+  }
+  .wrapper .h-menu-btn::after {
+    transform: translateY(8px);
+  }
+  .wrapper .h-menu-btn.up {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .wrapper .h-menu-btn.up::before {
+    transform: translateY(0px) rotateZ(40deg);
+  }
+  .wrapper .h-menu-btn.up::after {
+    transform: translateY(-2px) rotateZ(-40deg);
+  }
+  .wrapper .h-menu:hover {
+    background-color: rgb(255, 255, 255);
+  }
 }
 .wrapper section {
   margin-top: 250px;

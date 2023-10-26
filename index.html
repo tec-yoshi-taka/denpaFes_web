@@ -40,6 +40,9 @@
     </header>
     <main>
         <div class="wrapper">
+            <div class="h-menu">
+                <div class="h-menu-btn"></div>
+            </div>
             <section>
                 <div class="about">
                     <div class="h1_back">
@@ -163,15 +166,5 @@
         <p><small>©2023 TOKYO ELECTRONICS COLLEGE<br>制作・運営 学園祭実行委員会/ウェブ・メディア科</small></p>
     </footer>
     <script src="js/script.js"></script>
-    <script>
-        "use strict";
-        const hMenu = document.querySelector('.h-menu');
-        const header = document.querySelector('header');
-        const hMenuBtn = document.querySelector('.h-menu-btn');
-        hMenu.addEventListener('mousedown', () => {
-            header.classList.toggle('up');
-            hMenuBtn.classList.toggle('up');
-        });
-    </script>
 </body>
 </html>
