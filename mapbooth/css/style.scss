@@ -248,14 +248,15 @@ main {
         position: relative;
         width: 340px;
         height: 100px;
-        background-image: url(../img/heading_back_g.png);
+        background-image: url(../img/heading_back_g.webp);
+        background-size: 20px;
         margin: 0 auto;
         transform: translateX(50px);
         @include mq($sp) {
             position: relative;
             width: 150px;
             height: 40px;
-            background-image: url(../img/heading_back_g.png);
+            background-image: url(../img/heading_back_g.webp);
             background-size: 10px;
             margin: 0 auto;
             transform: translateX(30px);
@@ -610,14 +611,15 @@ main {
         position: relative;
         width: 340px;
         height: 100px;
-        background-image: url(../img/heading_back_g.png);
+        background-image: url(../img/heading_back_g.webp);
+        background-size: 20px;
         margin: 0 auto;
         transform: translateX(50px);
         @include mq($sp) {
             position: relative;
             width: 150px;
             height: 40px;
-            background-image: url(../img/heading_back_g.png);
+            background-image: url(../img/heading_back_g.webp);
             background-size: 10px;
             margin: 0 auto;
             transform: translateX(30px);

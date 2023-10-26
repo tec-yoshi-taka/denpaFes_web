@@ -192,45 +192,52 @@ header .gnav_list li:nth-of-type(3) a::after {
     margin-top: 200px;
   }
 }
-.wrapper section h1 {
+.wrapper section .h1_back {
   position: relative;
-  width: 260px;
-  height: 80px;
-  font-size: 22px;
-  text-align: center;
-  line-height: 80px;
-  margin: 0 auto 70px;
-  background-color: #D31176;
-  color: #fff;
-  z-index: 1;
-  transform: translateY(-40px);
+  width: 340px;
+  height: 100px;
+  background-image: url(../img/heading_back_p.webp);
+  background-size: 20px;
+  margin: 0 auto;
+  transform: translateX(50px);
 }
 @media screen and (max-width: 1200px) {
-  .wrapper section h1 {
-    width: 180px;
-    height: 60px;
-    line-height: 60px;
-    margin: 0 auto 50px;
+  .wrapper section .h1_back {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    background-image: url(../img/heading_back_p.webp);
+    background-size: 10px;
+    margin: 0 auto;
+    transform: translateX(30px);
   }
 }
-.wrapper section h1::after {
+.wrapper section .h1_back h1 {
   position: absolute;
-  bottom: -40px;
-  right: -55px;
-  content: "";
-  display: block;
+  top: -40px;
+  left: -50px;
   width: 100%;
   height: 100%;
-  background-image: url(../img/heading_back_p.webp);
-  background-size: 10%;
-  z-index: -1;
+  background-color: #D31176;
+  font-size: 30px;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  font-family: "Noto Sans", sans-serif;
 }
 @media screen and (max-width: 1200px) {
-  .wrapper section h1::after {
-    bottom: -30px;
-    right: -25px;
-    width: 95%;
-    height: 70%;
+  .wrapper section .h1_back h1 {
+    position: absolute;
+    top: -20px;
+    left: -30px;
+    width: 100%;
+    height: 100%;
+    background-color: #348439;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-family: "Noto Sans", sans-serif;
   }
 }
 .wrapper section .about {
@@ -241,7 +248,7 @@ header .gnav_list li:nth-of-type(3) a::after {
 }
 .wrapper section .about__area {
   width: 90%;
-  margin: 0 auto;
+  margin: 60px auto 0;
   display: flex;
   padding-bottom: 120px;
 }
@@ -326,6 +333,9 @@ header .gnav_list li:nth-of-type(3) a::after {
   background-color: rgba(255, 255, 255, 0.8);
   border: #1C96D4 3px solid;
 }
+.wrapper section .news .h1_back {
+  background-image: url(../img/heading_back_b.webp);
+}
 @media screen and (max-width: 1200px) {
   .wrapper section .news {
     padding-bottom: 80px;
@@ -339,7 +349,7 @@ header .gnav_list li:nth-of-type(3) a::after {
 }
 .wrapper section .news__area {
   width: 70%;
-  margin: 0 auto;
+  margin: 60px auto 0;
   border-top: #000 1px solid;
 }
 .wrapper section .news__area dl {
@@ -369,6 +379,9 @@ header .gnav_list li:nth-of-type(3) a::after {
   border: #FAC000 3px solid;
   padding-bottom: 120px;
 }
+.wrapper section .contest .h1_back {
+  background-image: url(../img/heading_back_y.webp);
+}
 @media screen and (max-width: 1200px) {
   .wrapper section .contest {
     padding-bottom: 80px;
@@ -382,7 +395,7 @@ header .gnav_list li:nth-of-type(3) a::after {
 }
 .wrapper section .contest__art {
   width: 95%;
-  margin: 0 auto;
+  margin: 60px auto 0;
   display: flex;
   justify-content: space-around;
 }
@@ -493,6 +506,9 @@ header .gnav_list li:nth-of-type(3) a::after {
   border: #348439 3px solid;
   padding-bottom: 120px;
 }
+.wrapper section .schedule .h1_back {
+  background-image: url(../img/heading_back_g.webp);
+}
 @media screen and (max-width: 1200px) {
   .wrapper section .schedule {
     padding-bottom: 80px;
@@ -501,11 +517,9 @@ header .gnav_list li:nth-of-type(3) a::after {
 .wrapper section .schedule h1 {
   background-color: #348439;
 }
-.wrapper section .schedule h1::after {
-  background-image: url(../img/heading_back_g.webp);
-}
 .wrapper section .schedule .time {
   text-align: center;
+  margin-top: 60px;
 }
 .wrapper section .schedule .time img {
   width: 800px;
@@ -551,7 +565,8 @@ header .gnav_list li:nth-of-type(3) a::after {
 }
 .sponsor .spnseor__area {
   display: grid;
-  padding: 40px;
+  margin-top: 60px;
+  padding: 0 40px;
   font-family: "BaseFont", sans-serif;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 1fr);

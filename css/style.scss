@@ -207,44 +207,70 @@ header {
             margin-top: 200px;
         }
 
-        h1 {
+        .h1_back {
             position: relative;
-            width: 260px;
-            height: 80px;
-            font-size: 22px;
-            text-align: center;
-            line-height: 80px;
-            margin: 0 auto 70px;
-            background-color: $red;
-            color: #fff;
-            z-index: 1;
-            transform: translateY(-40px);
+            width: 340px;
+            height: 100px;
+            // margin-bottom: 150px;
+            background-image: url(../img/heading_back_p.webp);
+            background-size: 20px;
+            margin: 0 auto;
+            transform: translateX(50px);
             @include mq($sp) {
-                width: 180px;
-                height: 60px;
-                line-height: 60px;
-                margin: 0 auto 50px;
+                position: relative;
+                width: 150px;
+                height: 40px;
+                background-image: url(../img/heading_back_p.webp);
+                background-size: 10px;
+                margin: 0 auto;
+                transform: translateX(30px);
+                
             }
-
-            &::after {
+            h1 {
                 position: absolute;
-                bottom: -40px;
-                right: -55px;
-                content: '';
-                display: block;
+                top: -40px;
+                left: -50px;
                 width: 100%;
                 height: 100%;
-                background-image: url(../img/heading_back_p.webp);
-                background-size: 10%;
-                z-index: -1;
+                background-color: $red;
+                font-size: 30px;
+                text-align: center;
+                line-height: 100px;
+                color: #fff;
+                font-family: 'Noto Sans', sans-serif;
                 @include mq($sp) {
-                    bottom: -30px;
-                    right: -25px;
-                    width: 95%;
-                    height: 70%;
+                    position: absolute;
+                    top: -20px;
+                    left: -30px;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #348439;
+                    font-size: 24px;
+                    text-align: center;
+                    line-height: 40px;
+                    color: #fff;
+                    font-family: 'Noto Sans', sans-serif;
                 }
             }
         }
+            // &::after {
+            //     position: absolute;
+            //     bottom: -40px;
+            //     right: -55px;
+            //     content: '';
+            //     display: block;
+            //     width: 100%;
+            //     height: 100%;
+            //     background-image: url(../img/heading_back_p.webp);
+            //     background-size: 10%;
+            //     z-index: -1;
+            //     @include mq($sp) {
+            //         bottom: -30px;
+            //         right: -25px;
+            //         width: 95%;
+            //         height: 70%;
+            //     }
+            // }
 
 
         /*------------------------------------ABOUT------------------------------------*/
@@ -255,7 +281,7 @@ header {
             border: $red 3px solid;
             &__area{
                 width: 90%;
-                margin: 0 auto;
+                margin: 60px auto 0;
                 display: flex;
                 padding-bottom: 120px;
                 @include mq($sp) {
@@ -333,6 +359,9 @@ header {
             padding-bottom: 120px;
             background-color: rgb(255, 255, 255, 0.8);
             border: $blue 3px solid;
+            .h1_back{
+                background-image: url(../img/heading_back_b.webp);
+            }
             @include mq($sp) {
                 padding-bottom: 80px;
             }
@@ -350,7 +379,7 @@ header {
 
             &__area {
                 width: 70%;
-                margin: 0 auto;
+                margin: 60px auto 0;
                 border-top: #000 1px solid;
 
                 dl {
@@ -379,6 +408,9 @@ header {
             background-color: rgb(255, 255, 255, 0.8);
             border: $yellow 3px solid;
             padding-bottom: 120px;
+            .h1_back{
+                background-image: url(../img/heading_back_y.webp);
+            }
             @include mq($sp) {
                 padding-bottom: 80px;
             }
@@ -393,7 +425,7 @@ header {
 
             &__art {
                 width: 95%;
-                margin: 0 auto;
+                margin: 60px auto 0;
                 display: flex;
                 justify-content: space-around;
                 @include mq($sp) {
@@ -496,17 +528,21 @@ header {
             background-color: rgb(255, 255, 255, 0.8);
             border: $green 3px solid;
             padding-bottom: 120px;
+            .h1_back{
+                background-image: url(../img/heading_back_g.webp);
+            }
             @include mq($sp) {
                 padding-bottom: 80px;
             }
             h1 {
                 background-color: $green;
-                &::after {
-                    background-image: url(../img/heading_back_g.webp);
-                }
+                // &::after {
+                //     background-image: url(../img/heading_back_g.webp);
+                // }
             }
             .time {
                 text-align: center;
+                margin-top: 60px;
                 img {
                     width: 800px;
                     transform: translateX(10px);
@@ -550,7 +586,8 @@ header {
     }
     .spnseor__area {
         display: grid;
-        padding: 40px;
+        margin-top: 60px;
+        padding: 0 40px;
         font-family: "BaseFont",sans-serif;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(3, 1fr);
