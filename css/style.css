@@ -132,7 +132,7 @@ header .gnav_list li:nth-of-type(1) a::after {
   border-radius: 5px;
   margin-top: 15px;
   transform: translateX(-30px);
-  background-color: #C53B70;
+  background-color: #D31176;
 }
 header .gnav_list li:nth-of-type(2) a {
   font-family: "Noto Sans", sans-serif;
@@ -200,7 +200,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   text-align: center;
   line-height: 80px;
   margin: 0 auto 70px;
-  background-color: #C53B70;
+  background-color: #D31176;
   color: #fff;
   z-index: 1;
   transform: translateY(-40px);
@@ -234,10 +234,10 @@ header .gnav_list li:nth-of-type(3) a::after {
   }
 }
 .wrapper section .about {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.8);
-  border: #C53B70 3px solid;
+  border: #D31176 3px solid;
 }
 .wrapper section .about__area {
   width: 90%;
@@ -320,7 +320,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   text-align: right;
 }
 .wrapper section .news {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   padding-bottom: 120px;
   background-color: rgba(255, 255, 255, 0.8);
@@ -363,7 +363,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   }
 }
 .wrapper section .contest {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.8);
   border: #FAC000 3px solid;
@@ -418,10 +418,10 @@ header .gnav_list li:nth-of-type(3) a::after {
   background-color: #1C96D4;
 }
 .wrapper section .contest__art .red {
-  box-shadow: 5px 5px 15px #C53B70;
+  box-shadow: 5px 5px 15px #D31176;
 }
 .wrapper section .contest__art .red a {
-  background-color: #C53B70;
+  background-color: #D31176;
 }
 .wrapper section .contest__art h2 {
   height: 150px;
@@ -487,7 +487,7 @@ header .gnav_list li:nth-of-type(3) a::after {
   }
 }
 .wrapper section .schedule {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.8);
   border: #348439 3px solid;
@@ -538,10 +538,10 @@ header .gnav_list li:nth-of-type(3) a::after {
 
 /*------------------------------------SPONSOR------------------------------------*/
 .sponsor {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.8);
-  border: #C53B70 3px solid;
+  border: #D31176 3px solid;
   padding-bottom: 120px;
 }
 @media screen and (max-width: 1200px) {

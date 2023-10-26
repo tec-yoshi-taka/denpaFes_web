@@ -1,4 +1,4 @@
-$red:#C53B70;
+$red:#D31176;
 $blue:#1C96D4;
 $yellow:#FAC000;
 $green:#348439;
@@ -249,7 +249,7 @@ header {
 
         /*------------------------------------ABOUT------------------------------------*/
         .about {
-            width: 90%;
+            width: 100%;
             margin: 0 auto;
             background-color: rgb(255, 255, 255, 0.8);
             border: $red 3px solid;
@@ -328,7 +328,7 @@ header {
         
         /*------------------------------------NEWS------------------------------------*/
         .news {
-            width: 90%;
+            width: 100%;
             margin: 0 auto;
             padding-bottom: 120px;
             background-color: rgb(255, 255, 255, 0.8);
@@ -374,7 +374,7 @@ header {
 
         /*------------------------------------CONTEST------------------------------------*/
         .contest {
-            width: 90%;
+            width: 100%;
             margin: 0 auto;
             background-color: rgb(255, 255, 255, 0.8);
             border: $yellow 3px solid;
@@ -491,7 +491,7 @@ header {
 
         /*------------------------------------MAP------------------------------------*/
         .schedule {
-            width: 90%;
+            width: 100%;
             margin: 0 auto;
             background-color: rgb(255, 255, 255, 0.8);
             border: $green 3px solid;
@@ -540,7 +540,7 @@ header {
 
 /*------------------------------------SPONSOR------------------------------------*/
 .sponsor {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     background-color: rgb(255, 255, 255, 0.8);
     border: $red 3px solid;

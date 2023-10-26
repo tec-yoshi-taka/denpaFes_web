@@ -1,7 +1,6 @@
 @charset "utf-8";
 
-$pc:1450;
-$sp:768;
+$sp:1200;
 @mixin mq($bp){
     @media screen and (max-width: #{$bp}px){
         @content;
@@ -116,9 +115,9 @@ header {
 /*------------------------------------MAIN------------------------------------*/
 .wrapper {
     // position: relative;
-    width: 1400px;
+    width: 1200px;
     margin: 0 auto;
-    @include mq($pc){
+    @include mq($sp){
         width: 100%;
         margin: 0 auto;    
     }
@@ -177,7 +176,7 @@ header {
 
         /*------------------------------------ACCESS------------------------------------*/
         .access {
-            width: 90%;
+            width: 100%;
             margin: 0 auto;
             background-color: rgb(255, 255, 255, 0.5);
             border: #FAC000 3px solid;
@@ -272,8 +271,8 @@ footer {
 
 
 
-/*------------------------------------768------------------------------------*/
-@media screen and (max-width: 768px) {
+/*------------------------------------1200------------------------------------*/
+@media screen and (max-width: 1200px) {
     body {
         background-image: url(../img/bg_sp.png);
         background-size: 100%;
