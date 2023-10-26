@@ -800,6 +800,44 @@ footer p {
 }
 
 /*---------------------------------MENU ANIMETION---------------------------------*/
+.menuAnime {
+  animation-name: fadeInAnime;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+@media screen and (max-width: 1200px) {
+  .menuAnime {
+    display: none;
+  }
+}
+
+.menuBackAnime {
+  animation-name: fadeOutAnime;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+@media screen and (max-width: 1200px) {
+  .menuBackAnime {
+    display: none;
+  }
+}
+
+@keyframes fadeInAnime {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes fadeOutAnime {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
 /*---------------BACKGROUND OPACITY-------------------*/
 .bgLight::after {
   position: fixed;

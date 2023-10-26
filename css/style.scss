@@ -778,43 +778,43 @@ footer {
 
 
 /*---------------------------------MENU ANIMETION---------------------------------*/
-// .menuAnime {
-//     animation-name: fadeInAnime;
-//     animation-duration: 0.8s;
-//     animation-fill-mode: forwards;
-//     @include mq($sp) {
-//         display: none;
-//     }
-// }
+.menuAnime {
+    animation-name: fadeInAnime;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    @include mq($sp) {
+        display: none;
+    }
+}
 
-// .menuBackAnime {
-//     animation-name: fadeOutAnime;
-//     animation-duration: 0.8s;
-//     animation-fill-mode: forwards;
-//     @include mq($sp) {
-//         display: none;
-//     }
-// }
+.menuBackAnime {
+    animation-name: fadeOutAnime;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    @include mq($sp) {
+        display: none;
+    }
+}
 
-// @keyframes fadeInAnime {
-//     0% {
-//         transform: translateY(0px);
-//     }
+@keyframes fadeInAnime {
+    0% {
+        transform: translateY(-100px);
+    }
 
-//     100% {
-//         transform: translateY(100px);
-//     }
-// }
+    100% {
+        transform: translateY(0px);
+    }
+}
 
-// @keyframes fadeOutAnime {
-//     0% {
-//         transform: translateY(100px);
-//     }
+@keyframes fadeOutAnime {
+    0% {
+        transform: translateY(0px);
+    }
 
-//     100% {
-//         transform: translateY(0px);
-//     }
-// }
+    100% {
+        transform: translateY(-100px);
+    }
+}
 
 /*---------------BACKGROUND OPACITY-------------------*/
 .bgLight::after{
