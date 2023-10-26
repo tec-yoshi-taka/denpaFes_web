@@ -13,8 +13,6 @@ window.addEventListener('scroll', () => {
             body.classList.add("bgOrigin")
         }
     
-
-
     }else{
         header.classList.add("menuAnime");
         header.classList.remove("menuBackAnime");

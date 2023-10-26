@@ -95,12 +95,29 @@ body::before {
 /*------------------------------------HRADR------------------------------------*/
 header {
   position: relative;
-  top: -100px;
+  top: 0;
   width: 100%;
   height: 85px;
   background-color: rgba(255, 255, 255, 0.8);
   position: fixed;
   z-index: 999;
+}
+@media screen and (max-width: 1200px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    z-index: 500;
+    transition: transform 0.3s linear;
+  }
 }
 header .gnav_list {
   margin: 0 auto;
@@ -166,7 +183,28 @@ header .gnav_list li:nth-of-type(3) a::after {
   border-radius: 5px;
   margin-top: 12px;
   transform: translateX(-30px);
-  background-color: #FAC000;
+  background-color: #E6B425;
+}
+@media screen and (max-width: 1200px) {
+  header .gnav_list {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  header .gnav_list li {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "sans-serif";
+  }
+  header .gnav_list li a {
+    font-family: "Noto Sans", sans-serif;
+  }
+}
+header.up {
+  transform: translateY(0);
 }
 
 /*------------------------------------MAIN------------------------------------*/
@@ -232,11 +270,11 @@ header .gnav_list li:nth-of-type(3) a::after {
     left: -30px;
     width: 100%;
     height: 100%;
-    background-color: #348439;
     font-size: 24px;
     text-align: center;
     line-height: 40px;
     color: #fff;
+    background-color: #D31176;
     font-family: "Noto Sans", sans-serif;
   }
 }
@@ -762,44 +800,6 @@ footer p {
 }
 
 /*---------------------------------MENU ANIMETION---------------------------------*/
-.menuAnime {
-  animation-name: fadeInAnime;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
-}
-@media screen and (max-width: 1200px) {
-  .menuAnime {
-    display: none;
-  }
-}
-
-.menuBackAnime {
-  animation-name: fadeOutAnime;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
-}
-@media screen and (max-width: 1200px) {
-  .menuBackAnime {
-    display: none;
-  }
-}
-
-@keyframes fadeInAnime {
-  0% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translateY(100px);
-  }
-}
-@keyframes fadeOutAnime {
-  0% {
-    transform: translateY(100px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
 /*---------------BACKGROUND OPACITY-------------------*/
 .bgLight::after {
   position: fixed;
