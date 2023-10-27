@@ -441,6 +441,10 @@ main {
   font-size: 12px;
   font-family: "Noto Sans JP", sans-serif;
 }
+.container-booth .inner .booth .plan_list .plan_inner a {
+  color: #00F;
+  font-size: 12px;
+}
 .container-booth .inner .main_booth .plan_list .plan_inner .title .no {
   width: 44px;
   height: 44px;
