@@ -427,6 +427,7 @@ header.up {
 @media screen and (max-width: 1200px) {
   .wrapper section .about__area .greet h2 {
     text-align: center;
+    font-size: 18px;
   }
 }
 .wrapper section .about__area .greet p {

@@ -456,6 +456,7 @@ header {
                         font-weight: bold;
                         @include mq($sp) {
                             text-align: center;
+                            font-size: 18px;
                         }
                     }
                     p {
