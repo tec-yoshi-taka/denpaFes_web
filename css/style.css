@@ -577,6 +577,9 @@ header.up {
     margin-left: 0;
   }
 }
+.wrapper section .news__area dl span {
+  background: linear-gradient(transparent 70%, rgba(28, 150, 212, 0.7) 70%);
+}
 .wrapper section .contest {
   width: 100%;
   margin: 0 auto;
