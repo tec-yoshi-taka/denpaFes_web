@@ -366,19 +366,52 @@ header.up {
   }
 }
 .wrapper section .about__area .greet {
-  overflow: auto;
   width: 50%;
   margin-left: 15%;
   height: 350px;
+  /* アクティブなタブ */
+  /* ラジオボタン非表示 */
 }
-.wrapper section .about__area .greet::-webkit-scrollbar {
-  width: 10px;
-  background: #848484;
-  border-radius: 20px;
+.wrapper section .about__area .greet .tab-label {
+  position: relative;
+  color: rgb(255, 255, 255);
+  background: rgb(255, 203, 229);
+  font-weight: bold;
+  margin-bottom: -1px;
+  padding: 10px 0.5em;
+  cursor: pointer;
+  display: block;
 }
-.wrapper section .about__area .greet::-webkit-scrollbar-thumb {
-  background: #D9D9D9;
-  border-radius: 20px;
+.wrapper section .about__area .greet .tab-label:before {
+  position: absolute;
+  right: 20px;
+  content: "▼";
+  margin-right: 0.2em;
+  display: inline-block;
+  transform: rotate(-90deg);
+}
+.wrapper section .about__area .greet .tab-switch:checked + .tab-label:before {
+  transform: rotate(0);
+}
+.wrapper section .about__area .greet .tab-content {
+  height: 0;
+  padding: 0 15px;
+  overflow: hidden;
+  opacity: 0;
+}
+.wrapper section .about__area .greet .tab-switch:checked + .tab-label {
+  background: rgba(206, 15, 114, 0.9);
+}
+.wrapper section .about__area .greet .tab-switch:checked + .tab-label + .tab-content {
+  height: auto;
+  overflow: auto;
+  margin-bottom: -1px;
+  padding: 15px;
+  opacity: 1;
+  transition: 0.5s;
+}
+.wrapper section .about__area .greet .tab-switch {
+  display: none;
 }
 @media screen and (max-width: 1200px) {
   .wrapper section .about__area .greet {
@@ -389,7 +422,6 @@ header.up {
 .wrapper section .about__area .greet h2 {
   font-size: 21px;
   font-weight: bold;
-  margin-bottom: 20px;
 }
 @media screen and (max-width: 1200px) {
   .wrapper section .about__area .greet h2 {
@@ -397,6 +429,8 @@ header.up {
   }
 }
 .wrapper section .about__area .greet p {
+  overflow: auto;
+  height: 200px;
   width: 100%;
   margin: 0 auto 50px;
   font-size: 18px;
