@@ -71,11 +71,28 @@ body::before {
   height: 30px;
   background: #000;
   /*線の動き1.4秒かけて動く。永遠にループ*/
-  animation: pathmove 1.4s ease-in-out infinite;
+  -webkit-animation: pathmove 1.4s ease-in-out infinite;
+          animation: pathmove 1.4s ease-in-out infinite;
   opacity: 0;
 }
 
 /*高さ・位置・透過が変化して線が上から下に動く*/
+@-webkit-keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 50px;
+    opacity: 0;
+  }
+}
 @keyframes pathmove {
   0% {
     height: 0;
@@ -303,8 +320,8 @@ header.up {
     color: #fff;
   }
   .wrapper .menu-btn span,
-  .wrapper .menu-btn::before,
-  .wrapper .menu-btn::after {
+.wrapper .menu-btn::before,
+.wrapper .menu-btn::after {
     content: "";
     display: block;
     height: 4px;
@@ -968,9 +985,12 @@ footer p {
 
 /*---------------------------------MENU ANIMETION---------------------------------*/
 .menuAnime {
-  animation-name: fadeInAnime;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 @media screen and (max-width: 1200px) {
   .menuAnime {
@@ -979,13 +999,25 @@ footer p {
 }
 
 .menuBackAnime {
-  animation-name: fadeOutAnime;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: fadeOutAnime;
+          animation-name: fadeOutAnime;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 @media screen and (max-width: 1200px) {
   .menuBackAnime {
     display: none;
+  }
+}
+
+@-webkit-keyframes fadeInAnime {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 0px;
   }
 }
 
@@ -995,6 +1027,14 @@ footer p {
   }
   100% {
     top: 0px;
+  }
+}
+@-webkit-keyframes fadeOutAnime {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: -100px;
   }
 }
 @keyframes fadeOutAnime {
@@ -1014,16 +1054,33 @@ footer p {
   height: 100%;
   content: "";
   z-index: -1;
-  animation-name: bgAnime;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: bgAnime;
+          animation-name: bgAnime;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
 .bgOrigin {
-  animation-name: bgAnimeReverse;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: bgAnimeReverse;
+          animation-name: bgAnimeReverse;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes bgAnime {
+  0% {
+    background-color: rgba(255, 255, 255, 0);
+    background-blend-mode: normal;
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: lighten;
+  }
 }
 
 @keyframes bgAnime {
@@ -1036,6 +1093,16 @@ footer p {
     background-blend-mode: lighten;
   }
 }
+@-webkit-keyframes bgAnimeReverse {
+  0% {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: lighten;
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+    background-blend-mode: normal;
+  }
+}
 @keyframes bgAnimeReverse {
   0% {
     background-color: rgba(255, 255, 255, 0.5);
@@ -1046,4 +1113,4 @@ footer p {
     background-blend-mode: normal;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */
