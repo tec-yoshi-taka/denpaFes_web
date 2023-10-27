@@ -1,17 +1,11 @@
 "use strict"
 
 const header = document.querySelector('header');
+const sp_header = document.querySelector('.menu-btn');
 const body = document.querySelector('body');
-const hMenu = document.querySelector('.h-menu');
-const hMenuBtn = document.querySelector('.h-menu-btn');
-
-hMenu.addEventListener('mousedown', () => {
-    header.classList.toggle('up');
-    hMenuBtn.classList.toggle('up');
-});
-
 let judge = false;
-window.addEventListener('scroll', () => {
+
+function headerDisplay(){
     if(window.pageYOffset < 150){
         header.classList.remove("menuAnime");
         body.classList.remove("bgLight")
@@ -28,6 +22,11 @@ window.addEventListener('scroll', () => {
         judge = true;
         
     }
+}
+window.addEventListener('scroll', () => {
+    headerDisplay();
 });
-    
+window.onload = ()=>{
+    headerDisplay();
+}
     
