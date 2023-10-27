@@ -107,9 +107,9 @@ body::before {
 
 
 /*------------------------------------HRADR------------------------------------*/
-header {
+header{
     position: relative;
-    top: 0;
+    top: -100px;
     width: 100%;
     height: 85px;
     background-color: rgb(255, 255, 255, 0.8);
@@ -131,7 +131,7 @@ header {
         transition: transform .3s linear;
     }
 
-    .gnav {
+    .gnav{
         &_list {
             margin: 0 auto;
             width: 65%;
@@ -231,55 +231,147 @@ header {
 .wrapper {
     width: 1200px;
     margin: 0 auto;
+    .menu, .menu-btn {
+        display: none;
+    }
     @include mq($sp){
-            width: 90%;
-            margin: 0 auto;
-            .h-menu {
-                position: fixed;
-                top:20px;
-                right: 20px;
+        width: 90%;
+        margin: 0 auto;
+        .ul{
+            list-style: none;
+            width: 100%;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            li {
+                font-size: 30px;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
                 align-items: center;
-                width: 50px;
-                height: 50px;
-                background-color: rgb(255, 255, 255, 0.8);
-                cursor: pointer;
-                z-index: 999;
-                transition: background-color .1s linear;
-                &-btn {
-                    position: relative;
-                    width: 40px;
-                    height: 4px;
-                    background-color: #D31176;
-                    &::before, &::after {
-                        content: '';
+                font-family: "sans-serif";
+            &:nth-of-type(1) {
+                    a {
+                        font-family: 'Noto Sans', sans-serif;
                         display: block;
-                        width: 40px;
-                        height: 4px;
-                        background-color: #D31176;
-                    }
-                    &::before {
-                        transform: translateY(-10px);
-                    }
-                    &::after {
-                        transform: translateY(8px);
-                    }
-                    &.up {
-                        background-color: rgb(255, 255, 255, 0.8);
-                        &::before {
-                            transform: translateY(0px) rotateZ(40deg);
-                        }    
+                        padding: 0 30px 0 30px;
                         &::after {
-                            transform: translateY(-2px) rotateZ(-40deg);
-                        }    
-                    }    
+                            content: '';
+                            display: block;
+                            width: calc(100% + 60px);
+                            height: 10px;
+                            border-radius: 5px;
+                            margin-top: 15px;
+                            transform: translateX(-30px);
+                            background-color: #D31176;
+                        }
+                    }
                 }
-                &:hover {
-                    background-color: rgb(255, 255, 255, 1);
+                &:nth-of-type(2) {
+                    a {
+                        font-family: 'Noto Sans', sans-serif;
+                        display: block;
+                        padding: 0 30px 0 30px;
+                        &::after {
+                            content: '';
+                            display: block;
+                            width: calc(100% + 60px);
+                            height: 10px;
+                            border-radius: 5px;
+                            margin-top: 12px;
+                            transform: translateX(-30px);
+                            background-color: #348439;
+                        }
+                    }
                 }
-            }   
+                &:nth-of-type(3) {
+                    a {
+                        font-family: 'Noto Sans', sans-serif;
+                        display: block;
+                        padding: 0 30px 0 30px;
+                        &::after {
+                            content: '';
+                            display: block;
+                            width: calc(100% + 60px);
+                            height: 10px;
+                            border-radius: 5px;
+                            margin-top: 12px;
+                            transform: translateX(-30px);
+                            background-color: #E6B425;
+                        }
+                    }
+                }
+            }
+        }
+        .a{
+            font-size: 30px;
+            font-family: 'Noto Sans', 'Noto Sans JP',sans-serif;
+            color: #000000;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .menu-btn{
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 2;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(255, 255, 255, 0.8);
+            color: #fff;
+        }
+        .menu-btn span,
+        .menu-btn::before,
+        .menu-btn::after {
+            content: '';
+            display: block;
+            height: 4px;
+            width: 40px;
+            background-color: $red;
+            transition: transform .3s;
+            /* transformプロパティにアニメーション */
+        }
+        .menu-btn::before{
+            transform: translateY(-8px);
+        }
+        .menu-btn::after{
+            transform: translateY(8px);
+        }
+        .menu-btn.close span { /* 真ん中の線は右に移動 */
+        transform: translateX(100px);
+        }
+        .menu-btn.close::before {
+        /* 線の太さ分だけ下にずらして45度回転 */
+        transform: translateY(3px) rotate(45deg);
+        }
+        .menu-btn.close::after {
+        /* 線の太さ分だけ上にずらして-45度回転 */
+        transform: translateY(-3px) rotate(-45deg);
+        }
+        .menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1; /* ハンバーガーより下 */
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgb(255, 255, 255, 0.8);
+            transform: translatey(-100vh);
+            transition: transform .3s linear;
+        }
+        .menu.view{
+            transform: translatey(0);
+        }
     }
 
     section {
@@ -890,21 +982,21 @@ footer {
 
 @keyframes fadeInAnime {
     0% {
-        transform: translateY(-100px);
+        top: -100px;
     }
 
     100% {
-        transform: translateY(0px);
+        top: 0px;
     }
 }
 
 @keyframes fadeOutAnime {
     0% {
-        transform: translateY(0px);
+        top: 0px;
     }
 
     100% {
-        transform: translateY(-100px);
+        top: -100px;
     }
 }
 
