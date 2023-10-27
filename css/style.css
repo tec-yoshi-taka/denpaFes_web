@@ -346,6 +346,7 @@ header.up {
   width: 35%;
   font-size: 18px;
   line-height: 1.8em;
+  margin-left: 3%;
   align-items: center;
 }
 @media screen and (max-width: 1200px) {
@@ -366,7 +367,7 @@ header.up {
   }
 }
 .wrapper section .about__area .greet {
-  width: 50%;
+  width: 45%;
   margin-left: 15%;
   height: 350px;
   /* アクティブなタブ */
@@ -432,7 +433,7 @@ header.up {
   overflow: auto;
   height: 200px;
   width: 100%;
-  margin: 0 auto 50px;
+  margin: 0 auto 10px;
   font-size: 18px;
   line-height: 1.8em;
 }
