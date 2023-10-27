@@ -95,7 +95,7 @@ body::before {
 /*------------------------------------HRADR------------------------------------*/
 header {
   position: relative;
-  top: 0;
+  top: -100px;
   width: 100%;
   height: 85px;
   background-color: rgba(255, 255, 255, 0.8);
@@ -212,56 +212,141 @@ header.up {
   width: 1200px;
   margin: 0 auto;
 }
+.wrapper .menu, .wrapper .menu-btn {
+  display: none;
+}
 @media screen and (max-width: 1200px) {
   .wrapper {
     width: 90%;
     margin: 0 auto;
   }
-  .wrapper .h-menu {
+  .wrapper .ul {
+    list-style: none;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .wrapper .ul li {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "sans-serif";
+  }
+  .wrapper .ul li:nth-of-type(1) a {
+    font-family: "Noto Sans", sans-serif;
+    display: block;
+    padding: 0 30px 0 30px;
+  }
+  .wrapper .ul li:nth-of-type(1) a::after {
+    content: "";
+    display: block;
+    width: calc(100% + 60px);
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    transform: translateX(-30px);
+    background-color: #D31176;
+  }
+  .wrapper .ul li:nth-of-type(2) a {
+    font-family: "Noto Sans", sans-serif;
+    display: block;
+    padding: 0 30px 0 30px;
+  }
+  .wrapper .ul li:nth-of-type(2) a::after {
+    content: "";
+    display: block;
+    width: calc(100% + 60px);
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 12px;
+    transform: translateX(-30px);
+    background-color: #348439;
+  }
+  .wrapper .ul li:nth-of-type(3) a {
+    font-family: "Noto Sans", sans-serif;
+    display: block;
+    padding: 0 30px 0 30px;
+  }
+  .wrapper .ul li:nth-of-type(3) a::after {
+    content: "";
+    display: block;
+    width: calc(100% + 60px);
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 12px;
+    transform: translateX(-30px);
+    background-color: #E6B425;
+  }
+  .wrapper .a {
+    font-size: 30px;
+    font-family: "Noto Sans", "Noto Sans JP", sans-serif;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .wrapper .menu-btn {
+    cursor: pointer;
     position: fixed;
     top: 20px;
     right: 20px;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
     background-color: rgba(255, 255, 255, 0.8);
-    cursor: pointer;
-    z-index: 999;
-    transition: background-color 0.1s linear;
+    color: #fff;
   }
-  .wrapper .h-menu-btn {
-    position: relative;
-    width: 40px;
-    height: 4px;
-    background-color: #D31176;
-  }
-  .wrapper .h-menu-btn::before, .wrapper .h-menu-btn::after {
+  .wrapper .menu-btn span,
+  .wrapper .menu-btn::before,
+  .wrapper .menu-btn::after {
     content: "";
     display: block;
-    width: 40px;
     height: 4px;
+    width: 40px;
     background-color: #D31176;
+    transition: transform 0.3s;
+    /* transformプロパティにアニメーション */
   }
-  .wrapper .h-menu-btn::before {
-    transform: translateY(-10px);
+  .wrapper .menu-btn::before {
+    transform: translateY(-8px);
   }
-  .wrapper .h-menu-btn::after {
+  .wrapper .menu-btn::after {
     transform: translateY(8px);
   }
-  .wrapper .h-menu-btn.up {
-    background-color: rgba(255, 255, 255, 0.8);
+  .wrapper .menu-btn.close span { /* 真ん中の線は右に移動 */
+    transform: translateX(100px);
   }
-  .wrapper .h-menu-btn.up::before {
-    transform: translateY(0px) rotateZ(40deg);
+  .wrapper .menu-btn.close::before {
+    /* 線の太さ分だけ下にずらして45度回転 */
+    transform: translateY(3px) rotate(45deg);
   }
-  .wrapper .h-menu-btn.up::after {
-    transform: translateY(-2px) rotateZ(-40deg);
+  .wrapper .menu-btn.close::after {
+    /* 線の太さ分だけ上にずらして-45度回転 */
+    transform: translateY(-3px) rotate(-45deg);
   }
-  .wrapper .h-menu:hover {
-    background-color: rgb(255, 255, 255);
+  .wrapper .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1; /* ハンバーガーより下 */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8);
+    transform: translatey(-100vh);
+    transition: transform 0.3s linear;
+  }
+  .wrapper .menu.view {
+    transform: translatey(0);
   }
 }
 .wrapper section {
@@ -906,18 +991,18 @@ footer p {
 
 @keyframes fadeInAnime {
   0% {
-    transform: translateY(-100px);
+    top: -100px;
   }
   100% {
-    transform: translateY(0px);
+    top: 0px;
   }
 }
 @keyframes fadeOutAnime {
   0% {
-    transform: translateY(0px);
+    top: 0px;
   }
   100% {
-    transform: translateY(-100px);
+    top: -100px;
   }
 }
 /*---------------BACKGROUND OPACITY-------------------*/
