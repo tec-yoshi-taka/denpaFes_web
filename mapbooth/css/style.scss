@@ -287,19 +287,24 @@ main {
             }
         }
     }
+    hr {
+        height: 6px;
+        margin-top: 150px;
+        background-color: #348439;
+        opacity: .5;
+        @include mq($sp) {
+            margin-top: 80px;
+        }
+    }
     .category {
-        position: sticky;
-        top: 80vh;
         display: block;
         height: 120px;
-        background-color: rgb(255, 255, 255, 0.8);
-        border: #348439 solid;
-        padding: 10px;
-        border-radius: 15px;
         margin: 0 auto;
+        margin-top: 150px;
         z-index: 99;
         @include mq($sp) {
             height: 60px;
+            margin-top: 60px;
         }
     }
     .inner {
@@ -312,7 +317,6 @@ main {
         .booth {
             width: 100%;
             margin-top: 70px;
-            margin-bottom: 150px;
             &:first-of-type {
                 margin-top: 0;
             }

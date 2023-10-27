@@ -274,21 +274,28 @@ main {
     font-family: "Noto Sans", sans-serif;
   }
 }
+.container-booth hr {
+  height: 6px;
+  margin-top: 150px;
+  background-color: #348439;
+  opacity: 0.5;
+}
+@media screen and (max-width: 1200px) {
+  .container-booth hr {
+    margin-top: 80px;
+  }
+}
 .container-booth .category {
-  position: sticky;
-  top: 80vh;
   display: block;
   height: 120px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: #348439 solid;
-  padding: 10px;
-  border-radius: 15px;
   margin: 0 auto;
+  margin-top: 150px;
   z-index: 99;
 }
 @media screen and (max-width: 1200px) {
   .container-booth .category {
     height: 60px;
+    margin-top: 60px;
   }
 }
 .container-booth .inner {
@@ -304,7 +311,6 @@ main {
 .container-booth .inner .booth {
   width: 100%;
   margin-top: 70px;
-  margin-bottom: 150px;
 }
 .container-booth .inner .booth:first-of-type {
   margin-top: 0;
