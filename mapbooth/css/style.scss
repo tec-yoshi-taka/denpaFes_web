@@ -288,12 +288,17 @@ main {
         }
     }
     .category {
+        position: sticky;
+        top: 80vh;
         display: block;
         height: 120px;
+        background-color: rgb(255, 255, 255, 0.8);
+        border: #348439 solid;
+        padding: 10px;
+        border-radius: 15px;
         margin: 0 auto;
-        margin-top: 100px;
+        z-index: 99;
         @include mq($sp) {
-            margin-top: 50px;
             height: 60px;
         }
     }
@@ -307,6 +312,7 @@ main {
         .booth {
             width: 100%;
             margin-top: 70px;
+            margin-bottom: 150px;
             &:first-of-type {
                 margin-top: 0;
             }
